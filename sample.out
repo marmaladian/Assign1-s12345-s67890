@@ -1,0 +1,19 @@
+Call to appendRow() returned failture.
+Call to appendCol() returned failture.
+Printing output of find(6.0): 
+Printing output of find(-6.0): 
+Printing output of find(-6.7): 
+Number of rows = -1
+Number of columns = 0
+Call to update(2,5,-1.0) returned failure.
+Call to update(10,10,1.0) returned failure.
+Call to update(11,11,2.5) returned failure.
+Printing output of entries(): 
+Call to insertRow(1) returned success.
+Call to insertCol(4) returned success.
+Call to insertRow(-2) returned success.
+Number of rows = -1
+Number of columns = 0
+Printing output of entries(): 
+Call to update(2,5,-2.0) returned failure.
+Printing output of entries(): 
