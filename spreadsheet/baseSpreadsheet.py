@@ -110,7 +110,7 @@ class BaseSpreadsheet:
 # -------------------------------------------------
 
 class BaseSpreadsheet:
-    def buildSpreadsheet(self, lCells: [Cell]):
+    def buildSpreadsheet(self, lCells: [Cell]):  # type: ignore
         """
         Construct the data structure to store nodes.
         @param lCells: list of cells to be stored
@@ -184,7 +184,7 @@ class BaseSpreadsheet:
 
         return 0
 
-    def find(self, value: float) -> [(int, int)]:
+    def find(self, value: float) -> [(int, int)]:  # type: ignore
         """
         Find and return a list of cells that contain the value 'value'.
 
@@ -195,7 +195,7 @@ class BaseSpreadsheet:
 
         pass
 
-    def entries(self) -> [Cell]:
+    def entries(self) -> [Cell]:  # type: ignore
         """
         @return A list of cells that have values (i.e., all non None cells).
         """
