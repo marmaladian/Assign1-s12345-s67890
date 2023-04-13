@@ -24,7 +24,8 @@ def usage():
 
     # On Teaching servers, use 'python3'
     # On Windows, you may need to use 'python' instead of 'python3' to get this to work
-    print('python3 spreadsheetFilebased.py', '<approach> <data fileName> <command fileName> <output fileName>')
+    print('python3 spreadsheetFilebased.py',
+          '<approach> <data fileName> <command fileName> <output fileName>')
     print('<approach> = <array | linkedlist | csr>')
     sys.exit(1)
 
@@ -90,60 +91,69 @@ if __name__ == '__main__':
                 if result:
                     outputFile.write("Call to appendRow() returned success.\n")
                 else:
-                    outputFile.write("Call to appendRow() returned failture.\n")
+                    outputFile.write("Call to appendRow() returned failure.\n")
             # append column
             elif command == 'AC':
                 result = spreadsheet.appendCol()
                 if result:
                     outputFile.write("Call to appendCol() returned success.\n")
                 else:
-                    outputFile.write("Call to appendCol() returned failture.\n")
+                    outputFile.write("Call to appendCol() returned failure.\n")
             # insert row
             elif command == 'IR':
                 rowIndex = int(commandValues[1])
-                result = spreadsheet.insertRow(rowIndex);
+                result = spreadsheet.insertRow(rowIndex)
                 if result:
-                    outputFile.write("Call to insertRow(" + str(rowIndex) + ") returned success.\n")
+                    outputFile.write(
+                        "Call to insertRow(" + str(rowIndex) + ") returned success.\n")
                 else:
-                    outputFile.write("Call to insertRow(" + str(rowIndex) + ") returned failure.\n")
+                    outputFile.write(
+                        "Call to insertRow(" + str(rowIndex) + ") returned failure.\n")
             # insert column
             elif command == 'IC':
                 colIndex = int(commandValues[1])
-                result = spreadsheet.insertCol(colIndex);
+                result = spreadsheet.insertCol(colIndex)
                 if result:
-                    outputFile.write("Call to insertCol(" + str(colIndex) + ") returned success.\n")
+                    outputFile.write(
+                        "Call to insertCol(" + str(colIndex) + ") returned success.\n")
                 else:
-                    outputFile.write("Call to insertCol(" + str(colIndex) + ") returned failure.\n")
+                    outputFile.write(
+                        "Call to insertCol(" + str(colIndex) + ") returned failure.\n")
             # update value
             elif command == 'U':
                 rowIndex = int(commandValues[1])
                 colIndex = int(commandValues[2])
                 value = float(commandValues[3])
-                result = spreadsheet.update(rowIndex, colIndex, value);
+                result = spreadsheet.update(rowIndex, colIndex, value)
                 if result:
-                    outputFile.write("Call to update(" + str(rowIndex) + "," + str(colIndex) + "," + str(value) + ") returned success.\n")
+                    outputFile.write("Call to update(" + str(rowIndex) + "," +
+                                     str(colIndex) + "," + str(value) + ") returned success.\n")
                 else:
-                    outputFile.write("Call to update(" + str(rowIndex) + "," + str(colIndex) + "," + str(value) + ") returned failure.\n")
+                    outputFile.write("Call to update(" + str(rowIndex) + "," +
+                                     str(colIndex) + "," + str(value) + ") returned failure.\n")
             # number of rows
             elif command == 'R':
-                result = spreadsheet.rowNum();
+                result = spreadsheet.rowNum()
                 outputFile.write("Number of rows = " + str(result) + "\n")
             # number of columns
             elif command == 'C':
-                result = spreadsheet.colNum();
+                result = spreadsheet.colNum()
                 outputFile.write("Number of columns = " + str(result) + "\n")
             # find value
             elif command == 'F':
                 value = float(commandValues[1])
-                lCells = spreadsheet.find(value);
-                outputFile.write("Printing output of find(" + str(value) + "): ")
-                outputFile.write(" | ".join(["".join(["(", str(cell[0]), ",", str(cell[1]), ")"]) for cell in lCells]))
+                lCells = spreadsheet.find(value)
+                outputFile.write(
+                    "Printing output of find(" + str(value) + "): ")
+                outputFile.write(" | ".join(
+                    ["".join(["(", str(cell[0]), ",", str(cell[1]), ")"]) for cell in lCells]))
                 outputFile.write("\n")
             # enumerate all entries that has a value in spreadsheet
             elif command == 'E':
-                lCells = spreadsheet.entries();
+                lCells = spreadsheet.entries()
                 outputFile.write("Printing output of entries(): ")
-                outputFile.write(" | ".join([cell.__str__() for cell in lCells]))
+                outputFile.write(" | ".join(
+                    [cell.__str__() for cell in lCells]))
                 outputFile.write("\n")
             else:
                 print('Unknown command.')
