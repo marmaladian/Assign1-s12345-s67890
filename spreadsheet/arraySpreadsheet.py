@@ -139,12 +139,12 @@ class ArraySpreadsheet(BaseSpreadsheet):
 
         @return List of cells (row, col) that contains the input value.
             """
-        cells = []
+        foundCells = []
         for i in range(self.rowNum()):
             for j in range(self.colNum()):
                 if self.spreadsheet[i][j] is not None and self.spreadsheet[i][j].val == value:
-                    cells.append((i, j))
-        return cells
+                    foundCells.append((i, j))
+        return foundCells
 
     def entries(self) -> [Cell]:  # type: ignore
         """
