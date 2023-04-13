@@ -24,7 +24,6 @@ class CSRSpreadsheet(BaseSpreadsheet):
         Construct the data structure to store nodes.
         @param lCells: list of cells to be stored
         """
-        print("BUILDING SPREADSHEET")
         for cell in lCells:
             print(f"trying to add {cell.val} at {cell.row}, {cell.col}")
             while not self.update(cell.row, cell.col, cell.val):
@@ -33,12 +32,8 @@ class CSRSpreadsheet(BaseSpreadsheet):
                     self.appendRow()
                 if cell.col >= self.num_cols:
                     self.appendCol()
-        
-        # HACK
-        # self.suma = [0, 5, 6, 6]
-        # self.cola = [0, 1, 2, 3]
-        # self.vala = [5, -2, 2, 1]
-        # self.num_cols = 4
+
+        # TODO remove this
         self.print_spreadsheet()
 
     def appendRow(self):
@@ -51,7 +46,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
             self.suma.append(0)
         sum_for_new_row = self.suma[-1] if self.suma else 0
         self.suma.append(sum_for_new_row)
-        print(f"append row: new size is R {self.num_rows()}, C {self.num_cols}")
+        # print(f"append row: new size is R {self.num_rows()}, C {self.num_cols}")
         return True         # why would this fail? too many rows?
 
     def appendCol(self):
@@ -61,7 +56,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @return True if operation was successful, or False if not.
         """
         self.num_cols += 1
-        print(f"append col: new size is R {self.num_rows()}, C {self.num_cols}")
+        # print(f"append col: new size is R {self.num_rows()}, C {self.num_cols}")
         return True         # why would this fail?
 
 
@@ -90,10 +85,11 @@ class CSRSpreadsheet(BaseSpreadsheet):
         return True if operation was successful, or False if not, e.g., colIndex is invalid.
         """
         success = False
-        if -1 <= colIndex < self.num_cols:
+        if -1 <= colIndex <= self.num_cols:
             for col in self.cola:
                 if col > colIndex:
                     col += 1
+            self.num_cols += 1
             success = True
         return success
 
@@ -109,34 +105,42 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @return True if cell can be updated.  False if cannot, e.g., row or column indices do not exist.
         """
         can_update = True
+        existing_cell = False
 
         if (rowIndex >= self.num_rows()) or (colIndex >= self.num_cols):
             can_update = False
-            print('row or col out of bounds')
+            # print('row or col out of bounds')
         else:
-            row_start_sum = self.suma[rowIndex] # if row > current, then return false.
-            row_end_sum = self.suma[rowIndex + 1]
-            cola_index, cur_sum = 0, 0
-            while cur_sum < row_start_sum:
-                cur_sum += self.vala[cola_index]
-                cola_index += 1
-            # now we are in the right part of col_a
-            # just have to check if col_a has an entry of our col value, or not
-            # before we go past the end of the row (the corresponding valas exceed
-            # suma[rowIndex+1])
-            # also need to consider if we're at the last row... need to add new row.
-            while (self.cola[cola_index] != colIndex) and (cur_sum < row_end_sum):
-                cur_sum += self.vala[cola_index]
-                cola_index += 1
-                if cur_sum >= row_end_sum:
-                    self.cola.insert(cola_index - 1, colIndex)
-                    self.vala.insert(cola_index - 1, value)
-                    # update the rows
-                    for row in range(rowIndex + 1, len(self.suma)):
-                        self.suma[row] += value
-
-                # if the value at the new cola index tips the sum over, then the value
-                # needs to go in just before it.
+            # calculate index for cola/vala
+            row_start_sum = self.suma[rowIndex]
+            row_end_sum   = self.suma[rowIndex + 1]
+            index = 0
+            sum = 0
+            while sum < row_start_sum:
+                sum += self.vala[index]
+                index += 1
+            # refine the index within the row
+            while sum <= row_end_sum and self.cola and index < len(self.cola) and self.cola[index] <= colIndex:
+                if self.cola[index] == colIndex:
+                    existing_cell = True
+                index += 1
+            
+            # now we know where we need to update/delete/insert
+            if existing_cell:
+                old_value = self.vala[index]
+                difference = value - old_value
+                self.vala[index] = value
+                for r in range(rowIndex + 1, len(self.suma)):
+                    self.suma[r] += difference
+            else:           # TODO not handling DELETE yet
+                old_value = 0
+                difference = value - old_value
+                # self.cola.insert(index + 2, colIndex)
+                # self.vala.insert(index + 2, value)
+                self.cola.insert(index, colIndex)
+                self.vala.insert(index, value)
+                for r in range(rowIndex + 1, len(self.suma)):
+                    self.suma[r] += difference
 
         return can_update
 
@@ -188,11 +192,27 @@ class CSRSpreadsheet(BaseSpreadsheet):
         """
         Prints the spreadsheet to the terminal.
         """
+        #   5  .  3
+        #   .  4  .
+        #   6  . -2
+
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . 7 . . . .
+        #   . 6 . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . .-6.7 . . .
+        #   . . . . . . . . . 2
+
+
         sum = 0
         vc_index = 0
-        for row_sum in self.suma:
+        for r in range(1, self.num_rows() + 1): # row_sum in self.suma
             col = 0
-            while sum < row_sum:
+            while sum != self.suma[r] and col < self.num_cols:          # stops if sum is reached...
                 if col == self.cola[vc_index]:
                     value = self.vala[vc_index]
                     print(value, end='\t')
