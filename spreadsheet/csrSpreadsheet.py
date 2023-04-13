@@ -178,7 +178,19 @@ class CSRSpreadsheet(BaseSpreadsheet):
         """
         @return A list of cells that have values (i.e., all non None cells).
         """
-        return []
+        values = []
+        sum = 0
+        row = 0
+        index = 0
+        while index < len(self.vala):
+            while sum == self.suma[row]:
+                row += 1
+            sum += self.vala[index]
+            c = Cell(row - 1, self.cola[index], self.vala[index])
+            values.append(c)
+            index += 1
+
+        return values
 
 
     def num_rows(self) -> int:
@@ -207,6 +219,11 @@ class CSRSpreadsheet(BaseSpreadsheet):
         #   . . . . .-6.7 . . .
         #   . . . . . . . . . 2
 
+        print()
+        print('cola\t', self.cola)
+        print('vala\t', self.vala)
+        print('suma\t', self.suma)
+        print()
 
         sum = 0
         vc_index = 0
@@ -219,16 +236,13 @@ class CSRSpreadsheet(BaseSpreadsheet):
                     sum += value
                     vc_index += 1
                 else:
-                    print('-', end='\t')
+                    print('·', end='\t')
                 col += 1
             while col < self.num_cols:
-                print('-', end='\t')
+                print('·', end='\t')
                 col += 1
             print()
-        print('---')
-        print(self.cola)
-        print(self.vala)
-        print(self.suma)
+        print()
 
             
 

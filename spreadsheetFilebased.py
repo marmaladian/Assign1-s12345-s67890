@@ -151,6 +151,8 @@ if __name__ == '__main__':
 
         outputFile.close()
         commandFile.close()
+        # TODO remove below line
+        spreadsheet.print_spreadsheet()
     except FileNotFoundError as e:
         print("Command file doesn't exist.")
         usage()
