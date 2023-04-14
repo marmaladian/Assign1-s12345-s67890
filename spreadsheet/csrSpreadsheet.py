@@ -1,5 +1,6 @@
 from spreadsheet.baseSpreadsheet import BaseSpreadsheet
 from spreadsheet.cell import Cell
+from math import isclose
 from typing import List, Tuple
 
 # ------------------------------------------------------------------------
@@ -111,18 +112,20 @@ class CSRSpreadsheet(BaseSpreadsheet):
             can_update = False
             # print('row or col out of bounds')
         else:
+            print(f'Updating R {rowIndex}, C {colIndex} to {value}')
             # calculate index for cola/vala
             row_start_sum = self.suma[rowIndex]
             row_end_sum   = self.suma[rowIndex + 1]
             index = 0
             sum = 0
-            while sum < row_start_sum:
+            while not isclose(sum, row_start_sum):
                 sum += self.vala[index]
                 index += 1
             # refine the index within the row
             while sum <= row_end_sum and self.cola and index < len(self.cola) and self.cola[index] <= colIndex:
                 if self.cola[index] == colIndex:
                     existing_cell = True
+                    break
                 index += 1
             
             # now we know where we need to update/delete/insert
