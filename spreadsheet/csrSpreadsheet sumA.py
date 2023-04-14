@@ -16,7 +16,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
     def __init__(self):
         self.cola = []      # indicates which columns have values
         self.vala = []      # indicates the values for populated cells
-        self.filled = []      # indicates the cumulative number of non-blank cells (first entry is 0, beginning of first row)
+        self.suma = []      # indicates the cumulative sum up to [n]th row, len = num_rows + 1
         self.num_cols = 0   # needed when empty columns are appended
 
 
@@ -43,13 +43,12 @@ class CSRSpreadsheet(BaseSpreadsheet):
 
         @return True if operation was successful, or False if not.
         """
-        if not self.filled:
-            filled_cells = 0
-        else:
-            filled_cells = self.filled[-1] # if self.cnta else 0
-        self.filled.append(filled_cells)
-        return True
-
+        if not self.suma:
+            self.suma.append(0)
+        sum_for_new_row = self.suma[-1] if self.suma else 0
+        self.suma.append(sum_for_new_row)
+        # print(f"append row: new size is R {self.num_rows()}, C {self.num_cols}")
+        return True         # why would this fail? too many rows?
 
     def appendCol(self):
         """
@@ -58,7 +57,8 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @return True if operation was successful, or False if not.
         """
         self.num_cols += 1
-        return True
+        # print(f"append col: new size is R {self.num_rows()}, C {self.num_cols}")
+        return True         # why would this fail?
 
 
     def insertRow(self, rowIndex: int)->bool:
@@ -70,10 +70,9 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @return True if operation was successful, or False if not, e.g., rowIndex is invalid.
         """
         success = False
-        if -1 <= rowIndex < self.num_rows():
-            end_of_row = rowIndex + 1
-            filled_cells = self.filled[end_of_row]
-            self.filled.insert(end_of_row, filled_cells)  # python insert is BEFORE index
+        if -1 <= rowIndex < self.num_rows():            # check range
+            sum_at_row = self.suma[rowIndex + 1]        # sum for new row = sum for row after
+            self.suma.insert(rowIndex + 1, sum_at_row)  # python insert is BEFORE index
             success = True
         return success
 
@@ -115,28 +114,36 @@ class CSRSpreadsheet(BaseSpreadsheet):
         else:
             print(f'Updating R {rowIndex}, C {colIndex} to {value}')
             # calculate index for cola/vala
-            filled_cells_at_start_of_row = self.filled[rowIndex]
-            filled_cells_by_end_of_row  = self.filled[rowIndex + 1]
-            index = filled_cells_at_start_of_row     # index into vals/cols at start of row
-            
-            while index <= filled_cells_by_end_of_row and self.cola and index < len(self.cola) and self.cola[index] <= colIndex:
+            row_start_sum = self.suma[rowIndex]
+            row_end_sum   = self.suma[rowIndex + 1]
+            index = 0
+            sum = 0
+            while not isclose(sum, row_start_sum):
+                sum += self.vala[index]
+                index += 1
+            # refine the index within the row
+            while sum <= row_end_sum and self.cola and index < len(self.cola) and self.cola[index] <= colIndex:
                 if self.cola[index] == colIndex:
                     existing_cell = True
                     break
                 index += 1
-                # if self.cola[index] > colIndex:
-                #     break
-                        
+            
             # now we know where we need to update/delete/insert
             if existing_cell:
                 old_value = self.vala[index]
                 difference = value - old_value
                 self.vala[index] = value
-            else:
+                for r in range(rowIndex + 1, len(self.suma)):
+                    self.suma[r] += difference
+            else:           # TODO not handling DELETE yet
+                old_value = 0
+                difference = value - old_value
+                # self.cola.insert(index + 2, colIndex)
+                # self.vala.insert(index + 2, value)
                 self.cola.insert(index, colIndex)
                 self.vala.insert(index, value)
-                for r in range(rowIndex + 1, self.num_rows() + 1):
-                    self.filled[r] += 1
+                for r in range(rowIndex + 1, len(self.suma)):
+                    self.suma[r] += difference
 
         return can_update
 
@@ -175,13 +182,13 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @return A list of cells that have values (i.e., all non None cells).
         """
         values = []
-        filled_cells_so_far = 0
+        sum = 0
         row = 0
         index = 0
         while index < len(self.vala):
-            while filled_cells_so_far == self.filled[row]:
+            while sum == self.suma[row]:
                 row += 1
-            filled_cells_so_far += 1
+            sum += self.vala[index]
             c = Cell(row - 1, self.cola[index], self.vala[index])
             values.append(c)
             index += 1
@@ -193,29 +200,44 @@ class CSRSpreadsheet(BaseSpreadsheet):
         """
         @return Number of rows in the spreadsheet.
         """
-        return len(self.filled) - 1 if self.filled else 0
+        return len(self.suma) - 1 if self.suma else 0
     
 
     def print_spreadsheet(self) -> None:
         """
         Prints the spreadsheet to the terminal.
         """
+        #   5  .  3
+        #   .  4  .
+        #   6  . -2
+
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . 7 . . . .
+        #   . 6 . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . . . . . . .
+        #   . . . . .-6.7 . . .
+        #   . . . . . . . . . 2
+
         print()
         print('cola\t', self.cola)
         print('vala\t', self.vala)
-        print('suma\t', self.filled)
+        print('suma\t', self.suma)
         print()
 
-        filled_cells_so_far = 0
-        index = 0
-        for r in range(1, len(self.filled)): # row_sum in self.suma
+        sum = 0
+        vc_index = 0
+        for r in range(1, self.num_rows() + 1): # row_sum in self.suma
             col = 0
-            while filled_cells_so_far != self.filled[r] and col < self.num_cols:
-                if col == self.cola[index]:
-                    value = self.vala[index]
+            while sum != self.suma[r] and col < self.num_cols:          # stops if sum is reached...
+                if col == self.cola[vc_index]:
+                    value = self.vala[vc_index]
                     print(value, end='\t')
-                    filled_cells_so_far += 1
-                    index += 1
+                    sum += value
+                    vc_index += 1
                 else:
                     print('·', end='\t')
                 col += 1
