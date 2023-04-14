@@ -16,8 +16,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # TO BE IMPLEMENTED
         pass
 
-
-    def buildSpreadsheet(self, lCells: [Cell]):
+    def buildSpreadsheet(self, lCells: [Cell]):  # type: ignore
         """
         Construct the data structure to store nodes.
         @param lCells: list of cells to be stored
@@ -26,8 +25,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # TO BE IMPLEMENTED
         pass
 
-
-    def appendRow(self)->bool:
+    def appendRow(self) -> bool:
         """
         Appends an empty row to the spreadsheet.
 
@@ -40,8 +38,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return True
 
-
-    def appendCol(self)->bool:
+    def appendCol(self) -> bool:
         """
         Appends an empty column to the spreadsheet.
 
@@ -54,8 +51,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return True
 
-
-    def insertRow(self, rowIndex: int)->bool:
+    def insertRow(self, rowIndex: int) -> bool:
         """
         Inserts an empty row into the spreadsheet.
 
@@ -70,8 +66,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return True
 
-
-    def insertCol(self, colIndex: int)->bool:
+    def insertCol(self, colIndex: int) -> bool:
         """
         Inserts an empty column into the spreadsheet.
 
@@ -85,7 +80,6 @@ class ArraySpreadsheet(BaseSpreadsheet):
 
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return True
-
 
     def update(self, rowIndex: int, colIndex: int, value: float) -> bool:
         """
@@ -104,8 +98,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return True
 
-
-    def rowNum(self)->int:
+    def rowNum(self) -> int:
         """
         @return Number of rows the spreadsheet has.
         """
@@ -116,8 +109,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return 0
 
-
-    def colNum(self)->int:
+    def colNum(self) -> int:
         """
         @return Number of column the spreadsheet has.
         """
@@ -128,16 +120,14 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return 0
 
-
-
-    def find(self, value: float) -> [(int, int)]:
+    def find(self, value: float) -> [(int, int)]:  # type: ignore
         """
         Find and return a list of cells that contain the value 'value'.
 
         @param value value to search for.
 
         @return List of cells (row, col) that contains the input value.
-	    """
+            """
 
         # TO BE IMPLEMENTED
         pass
@@ -145,9 +135,7 @@ class ArraySpreadsheet(BaseSpreadsheet):
         # REPLACE WITH APPROPRIATE RETURN VALUE
         return []
 
-
-
-    def entries(self) -> [Cell]:
+    def entries(self) -> [Cell]:  # type: ignore
         """
         @return A list of cells that have values (i.e., all non None cells).
         """
