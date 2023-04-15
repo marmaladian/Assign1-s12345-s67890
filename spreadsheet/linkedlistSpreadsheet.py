@@ -96,25 +96,25 @@ class LinkedListSpreadsheet(BaseSpreadsheet):
                 # if row is greater than the current greatest row, append a new row
                 if cell.row > self.tail.value.head.value.row:
                     self.appendRow()
-                # otherwise create row
-                else:
-                    self.createRow(cell.row)
 
                 currNode = self.head
                 currRow = self.head.value.head.value.row
                 # Traverse to correct row
                 while currNode is not None and currRow < cell.row:
+                    currRow = currNode.value.head.value.row
                     currNode = currNode.next
-                    currRow = currNode.value.head.value.row
                 while currNode is not None and currRow > cell.row:
-                    currNode = currNode.prev
                     currRow = currNode.value.head.value.row
-                if currRow == cell.row:
+                    currNode = currNode.prev
+                # if matching row found, insert a cell
+                if currNode is not None and currRow == cell.row:
                     # shift to correct row linked list that contains columns
                     colList = currNode.value
-
                     # insert column
                     colList.insertColCell(cell)
+                # otherwise create and insert a row
+                else:
+                    self.createRow(cell.row)
 
     def appendRow(self):
         """
@@ -334,7 +334,6 @@ class LinkedListSpreadsheet(BaseSpreadsheet):
             rowNode = rowNode.next
         return cells
 
-    # TODO, this needs to die
     def createRow(self, rowIndex: int) -> bool:
         """
         Inserts an empty row into the spreadsheet.
