@@ -14,15 +14,12 @@ if __name__ == '__main__':
     '''
     This script is designed to execute various operations (update, find and
     insert) and measure the execution time.
-    
-    This script looks for test data files in the ../generation folder then
-    creates an array, doubly-linked-list and CSR spreadsheet for each of the
-    data files.
     '''
 
     data_files = []
     test_cases = []
     results = []
+    entries_out = []
 
     def remove_data_files():
         print('Removing old data files!')
@@ -62,17 +59,20 @@ if __name__ == '__main__':
 
 
     def create_spreadsheets():
+        print('Building spreadsheets...')
         for filename in data_files:
             (cells, values) = create_cells_from_file(data_dir + '/' + filename)
 
             array = ArraySpreadsheet()
             array.buildSpreadsheet(cells)
 
+            csr = CSRSpreadsheet()
+            csr.buildSpreadsheet(cells)
+
+            # building linked list last, because it pops first item from cells!
             linked_list = LinkedListSpreadsheet()
             linked_list.buildSpreadsheet(cells)
 
-            csr = CSRSpreadsheet()
-            csr.buildSpreadsheet(cells)
 
             test_case = {
                 'filename':       filename,
@@ -112,18 +112,6 @@ if __name__ == '__main__':
                 results.append([test[0], test[1], 'linked_list', timeit.timeit(lambda: find_test_helper(linked_list, test[2]()), number=iterations)])
                 results.append([test[0], test[1], 'csr', timeit.timeit(lambda: find_test_helper(csr, test[2]()), number=iterations)])
 
-
-            # print(f'testing findable values for {test_case["filename"]}')
-            # print('array:\t', timeit.timeit(lambda: find_test_helper(array, findable_value), number=iterations))
-            # print('ll:\t', timeit.timeit(lambda: find_test_helper(linked_list, findable_value), number=iterations))
-            # print('csr:\t', timeit.timeit(lambda: find_test_helper(csr, findable_value), number=iterations))
-            # print()
-
-            # print(f'testing unfindable values for {test_case["filename"]}')
-            # print('array:\t', timeit.timeit(lambda: find_test_helper(array, not_findable_value), number=iterations))
-            # print('ll:\t', timeit.timeit(lambda: find_test_helper(linked_list, not_findable_value), number=iterations))
-            # print('csr:\t', timeit.timeit(lambda: find_test_helper(csr, not_findable_value), number=iterations))
-            # print()
 
     def test_insert(iterations):
         for test_case in test_cases:
@@ -202,6 +190,21 @@ if __name__ == '__main__':
                 results.append([test[0], test[1], 'linked_list', timeit.timeit(lambda: update_test_helper(linked_list, test[2](), test[3](), update_value), number=iterations)])
                 results.append([test[0], test[1], 'csr', timeit.timeit(lambda: update_test_helper(csr, test[2](), test[3](), update_value), number=iterations)])
 
+    def compare_entries():
+       for test_case in test_cases:
+            (rows, cols, fill_percent, min_val, max_val) = test_case['filename'].split('_')
+
+            array = test_case['array']
+            linked_list = test_case['linked_list']
+            csr = test_case['csr']
+
+            data_desc = f'R {rows}, C {cols}, ~{fill_percent} filled'
+
+            entries_out.append([data_desc, 'array', array.entries()])
+            entries_out.append([data_desc, 'linked_list', linked_list.entries()])
+            entries_out.append([data_desc, 'csr', csr.entries()])
+            
+
     def run():
         # delete existing files in data directory
         remove_data_files()
@@ -209,10 +212,10 @@ if __name__ == '__main__':
         print('Generating new data files...')
         # create source data
         # small spreadsheets
-        small = 50
+        small = 5
         dataGenerator.dataGen(data_dir, small, small,               0.3, -100000, 100000)
         dataGenerator.dataGen(data_dir, small // 10, small * 10,    0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, small * 10, small // 10,    0.3, -100000, 100000)
+        dataGenerator.dataGen(data_dir, small * 10, small // 10,      0.3, -100000, 100000)
         
         dataGenerator.dataGen(data_dir, small, small,               1.0, -100000, 100000)
         dataGenerator.dataGen(data_dir, small // 10, small * 10,    1.0, -100000, 100000)
@@ -240,13 +243,20 @@ if __name__ == '__main__':
 
         if (get_data_files()):
             create_spreadsheets()
-            test_find(10)
-            test_insert(10)
-            test_update(10)
+            # # test_find(100)
+            # # test_insert(100)
+            # # test_update(100)
 
         print(f'{len(results)} tests completed.')
         print('---------------------------------------------------------------------------------------------------------------------------------')
         for result in results:
             print(f'{result[0]:40}\t{result[1]:30}\t{result[2]:10}\t{result[3]}')
+
+        # compare_entries()
+        # for entry in entries_out:
+        #     print(f'{entry[0]:40}\t{entry[1]:30}')
+        #     for entry in entry[2]:
+        #         print(entry, end='\t')
+        #     print()
 
     run()

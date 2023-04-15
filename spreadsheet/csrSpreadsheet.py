@@ -172,7 +172,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
         cells_with_value = []
         col = 0
         index = 0
-        filled_cells_so_far = 0   
+        filled_cells_so_far = 0
         for r in range(0, self.num_rows()):
             col = 0
             while col < self.num_cols:
