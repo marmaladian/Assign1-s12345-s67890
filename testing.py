@@ -61,6 +61,7 @@ if __name__ == '__main__':
     def create_spreadsheets():
         print('Building spreadsheets...')
         for filename in data_files:
+            print(f'\t- {filename}')
             (cells, values) = create_cells_from_file(data_dir + '/' + filename)
 
             array = ArraySpreadsheet()
@@ -212,7 +213,7 @@ if __name__ == '__main__':
         print('Generating new data files...')
         # create source data
         # small spreadsheets
-        small = 5
+        small = 50
         dataGenerator.dataGen(data_dir, small, small,               0.3, -100000, 100000)
         dataGenerator.dataGen(data_dir, small // 10, small * 10,    0.3, -100000, 100000)
         dataGenerator.dataGen(data_dir, small * 10, small // 10,      0.3, -100000, 100000)
@@ -232,20 +233,20 @@ if __name__ == '__main__':
         dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  1.0, -100000, 100000)
 
         # large spreadsheets
-        large = 500
-        dataGenerator.dataGen(data_dir, large, large,               0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large // 10, large * 10,    0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large * 10, large // 10,    0.3, -100000, 100000)
+        # large = 500
+        # dataGenerator.dataGen(data_dir, large, large,               0.3, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, large // 10, large * 10,    0.3, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, large * 10, large // 10,    0.3, -100000, 100000)
         
-        dataGenerator.dataGen(data_dir, large, large,               1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large // 10, large * 10,    1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large * 10, large // 10,    1.0, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, large, large,               1.0, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, large // 10, large * 10,    1.0, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, large * 10, large // 10,    1.0, -100000, 100000)
 
         if (get_data_files()):
             create_spreadsheets()
-            # # test_find(100)
-            # # test_insert(100)
-            # # test_update(100)
+            test_find(10)
+            test_insert(10)
+            test_update(10)
 
         print(f'{len(results)} tests completed.')
         print('---------------------------------------------------------------------------------------------------------------------------------')
