@@ -70,8 +70,10 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @return True if operation was successful, or False if not, e.g., rowIndex is invalid.
         """
         success = False
-        if -1 <= rowIndex < self.num_rows():
-            end_of_row = rowIndex + 1
+        if rowIndex == -1:
+            self.appendRow()
+        elif 0 <= rowIndex < self.num_rows():
+            end_of_row = rowIndex
             filled_cells = self.filled[end_of_row]
             self.filled.insert(end_of_row, filled_cells)  # python insert is BEFORE index
             success = True
@@ -87,10 +89,12 @@ class CSRSpreadsheet(BaseSpreadsheet):
         return True if operation was successful, or False if not, e.g., colIndex is invalid.
         """
         success = False
-        if -1 <= colIndex <= self.num_cols:
-            for col in self.cola:
-                if col > colIndex:
-                    col += 1
+        if colIndex == -1:
+            self.appendCol()
+        elif 0 <= colIndex <= self.num_cols:
+            for index in range(0, len(self.cola)):
+                if self.cola[index] >= colIndex:
+                    self.cola[index] += 1
             self.num_cols += 1
             success = True
         return success
@@ -245,6 +249,3 @@ class CSRSpreadsheet(BaseSpreadsheet):
                 col += 1
             print()
             
-            
-
-
