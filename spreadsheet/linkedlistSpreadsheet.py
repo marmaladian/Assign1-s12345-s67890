@@ -30,6 +30,42 @@ class DoubleLinkedList:
         self.head = None
         self.tail = None
 
+    def insertColCell(self, value):
+        newNode = Node(value)
+
+        # If the list is empty, set the new node as the head and tail
+        if self.head is None:
+            self.head = newNode
+            self.tail = newNode
+            return True
+
+        # If the new node should be inserted at the head of the list
+        if newNode.value.col < self.head.value.col:
+            newNode.next = self.head
+            self.head.prev = newNode
+            self.head = newNode
+            return True
+
+        # If the new node should be inserted at the tail of the list
+        if newNode.value.col >= self.tail.value.col:
+            newNode.prev = self.tail
+            self.tail.next = newNode
+            self.tail = newNode
+            return True
+
+        # Find the correct position for the new node
+        current_node = self.head
+        while current_node.next is not None and current_node.next.value.col < newNode.value.col:
+            current_node = current_node.next
+
+        # Insert the new node into the list
+        newNode.prev = current_node
+        newNode.next = current_node.next
+        current_node.next.prev = newNode
+        current_node.next = newNode
+
+        return True
+
 
 class LinkedListSpreadsheet(BaseSpreadsheet):
 
@@ -66,7 +102,7 @@ class LinkedListSpreadsheet(BaseSpreadsheet):
 
                 currNode = self.head
                 currRow = self.head.value.head.value.row
-                # ADD NODES IN CORRECT ROWS AND COLUMN ORDER
+                # Traverse to correct row
                 while currNode is not None and currRow < cell.row:
                     currNode = currNode.next
                     currRow = currNode.value.head.value.row
@@ -76,34 +112,9 @@ class LinkedListSpreadsheet(BaseSpreadsheet):
                 if currRow == cell.row:
                     # shift to correct row linked list that contains columns
                     colList = currNode.value
-                    # traverse to correct column position
-                    colNode = colList.head
 
-                    # node to insert
-                    newNode = Node(cell)
-                    while colNode is not None:
-                        # insert at start
-                        if colNode.value.col > cell.col:
-                            newNode.next = colNode
-                            colNode.prev = newNode
-                            colList.head = newNode
-                            break
-                        # insert in middle
-                        if colNode.value.col < cell.col:
-                            # wind back one node
-                            colNode = colNode.prev
-                            newNode.next = colNode.next
-                            newNode.prev = colNode
-                            colNode.next = newNode
-
-                        # insert at end
-                        if colNode.next is None:
-                            colNode.next = newNode
-                            newNode.prev = colNode
-                            colList.tail = newNode
-                            break
-
-                        colNode = colNode.next
+                    # insert column
+                    colList.insertColCell(cell)
 
     def appendRow(self):
         """
@@ -246,28 +257,8 @@ class LinkedListSpreadsheet(BaseSpreadsheet):
                         colNode.value.val = value
                         return True
                     colNode = colNode.next
-                # if you're still inside the spreadsheet, step back one, create and add new column
-                if colNode is not None:
-                    # step back one
-                    # colNode = colNode.prev
-                    newNode = Node(Cell(rowIndex, colIndex, value))
-                    if colNode.prev is None:  # its the head
-                        colList.head = newNode
-                        colList.head.next = colNode
-                        colNode.prev = colList.head
-                        return True
-                    elif colNode.next is None:  # its the tail
-                        colNode.next = newNode
-                        newNode.prev = colNode
-                        colList.tail = newNode
-                        return True
-                    else:  # its in the middle
-                        newNode.next = colNode.next
-                        newNode.prev = colNode
-                        colNode.next = newNode
-                        if newNode.next:
-                            newNode.next.prev = newNode
-                        return True
+                # if you're still inside the spreadsheet, create and add new column
+                return colList.insertColCell(Cell(rowIndex, colIndex, value))
 
             # if row hasn't been created yet, but you're still inside spreadsheet, create row
             if rowCreated is False and rowNode.next is not None and rowNode.next.value.head.value.row > rowIndex:
