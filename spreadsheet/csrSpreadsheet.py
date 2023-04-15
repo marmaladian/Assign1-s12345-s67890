@@ -119,7 +119,11 @@ class CSRSpreadsheet(BaseSpreadsheet):
             filled_cells_by_end_of_row  = self.filled[rowIndex + 1]
             index = filled_cells_at_start_of_row     # index into vals/cols at start of row
             
-            while index <= filled_cells_by_end_of_row and self.cola and index < len(self.cola) and self.cola[index] <= colIndex:
+            while not (filled_cells_at_start_of_row == filled_cells_by_end_of_row == 0) \
+                  and index <= filled_cells_by_end_of_row \
+                  and self.cola \
+                  and index < len(self.cola) \
+                  and self.cola[index] <= colIndex:
                 if self.cola[index] == colIndex:
                     existing_cell = True
                     break
@@ -164,10 +168,22 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @return List of cells (row, col) that contains the input value.
 	    """
 
-        # TO BE IMPLEMENTED
+        cells_with_value = []
+        col = 0
+        index = 0
+        filled_cells_so_far = 0   
+        for r in range(0, self.num_rows()):
+            col = 0
+            while col < self.num_cols:
+                if filled_cells_so_far < self.filled[r+1] and self.cola[index] == col:
+                    if isclose(self.vala[index], value):
+                        cell = (r, col)
+                        cells_with_value.append(cell)
+                    index += 1
+                    filled_cells_so_far += 1
+                col += 1
 
-        # REPLACE WITH APPROPRIATE RETURN VALUE
-        return []
+        return cells_with_value
 
 
     def entries(self) -> List[Cell]:
@@ -205,26 +221,30 @@ class CSRSpreadsheet(BaseSpreadsheet):
         print('vala\t', self.vala)
         print('suma\t', self.filled)
         print()
-
-        filled_cells_so_far = 0
-        index = 0
-        for r in range(1, len(self.filled)): # row_sum in self.suma
-            col = 0
-            while filled_cells_so_far != self.filled[r] and col < self.num_cols:
-                if col == self.cola[index]:
-                    value = self.vala[index]
-                    print(value, end='\t')
-                    filled_cells_so_far += 1
-                    index += 1
-                else:
-                    print('·', end='\t')
-                col += 1
-            while col < self.num_cols:
-                print('·', end='\t')
-                col += 1
-            print()
+        
+        # print column headers
+        print('\t', end='')
+        for c in range(0, self.num_cols):
+            print(c, '\t', end='')
         print()
 
+        # print rows
+        col = 0
+        index = 0
+        filled_cells_so_far = 0        
+        for r in range(0, self.num_rows()):
+            print(r, '\t', end='')
+            col = 0
+            while col < self.num_cols:
+                if filled_cells_so_far < self.filled[r+1] and self.cola[index] == col:
+                    print(self.vala[index], end='\t')
+                    index += 1
+                    filled_cells_so_far += 1
+                else:
+                    print('.', end='\t')
+                col += 1
+            print()
+            
             
 
 
