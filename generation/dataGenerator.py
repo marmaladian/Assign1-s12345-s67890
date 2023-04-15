@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     def dataGen(numRows, numCols, filled, lowVal, highVal, distribution):
         # Create a file for writing
-        with open(str(numRows) + '_' + str(numCols) + '_' + str(filled) + '_' + str(lowVal) + '_' + str(highVal) + '_' + distribution, 'w') as file:
+        with open(str(numRows) + '_' + str(numCols) + '_' + str(filled) + '_' + str(lowVal) + '_' + str(highVal) + '_' + distribution + '.data', 'w') as file:
 
             # Loop through each cell in the spreadsheet
             for row in range(numRows):
