@@ -26,7 +26,6 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @param lCells: list of cells to be stored
         """
         for cell in lCells:
-            print(f"trying to add {cell.val} at {cell.row}, {cell.col}")
             while not self.update(cell.row, cell.col, cell.val):
                 # well, we gotta add the row or column.
                 if cell.row >= self.num_rows():
@@ -34,8 +33,7 @@ class CSRSpreadsheet(BaseSpreadsheet):
                 if cell.col >= self.num_cols:
                     self.appendCol()
 
-        # TODO remove this
-        self.print_spreadsheet()
+        # self.print_spreadsheet()
 
     def appendRow(self):
         """
@@ -117,7 +115,6 @@ class CSRSpreadsheet(BaseSpreadsheet):
             can_update = False
             # print('row or col out of bounds')
         else:
-            print(f'Updating R {rowIndex}, C {colIndex} to {value}')
             # calculate index for cola/vala
             filled_cells_at_start_of_row = self.filled[rowIndex]
             filled_cells_by_end_of_row  = self.filled[rowIndex + 1]

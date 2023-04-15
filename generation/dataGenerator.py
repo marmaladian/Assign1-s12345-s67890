@@ -7,8 +7,8 @@ if __name__ == '__main__':
     filename is in the format: numRows_numCols_filled_lowVal_highVal_distribution
     run from the command line with the following arguments:
 
-    @param numCols: the number of columns
     @param numRows: the number of rows
+    @param numCols: the number of columns
     @param filled: fill probability (0.0 - 1.0)
     @param lowVal: the lowest possible value in the spreadsheet
     @param highVal: the highest possible value in the spreadsheet
