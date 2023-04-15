@@ -91,8 +91,6 @@ if __name__ == '__main__':
             linked_list = test_case['linked_list']
             csr = test_case['csr']
 
-            print(test_case['filename'].split('_'))
-
             (rows, cols, fill_percent, min_val, max_val) = test_case['filename'].split('_')
             findable_value = random.choice(test_case['values'])
             not_findable_value = float(max_val) + 25
@@ -251,7 +249,7 @@ if __name__ == '__main__':
         print(f'{len(results)} tests completed.')
         print('---------------------------------------------------------------------------------------------------------------------------------')
         for result in results:
-            print(f'{result[0]:40}\t{result[1]:30}\t{result[2]:10}\t{result[3]}')
+            print(f'{result[0]:35}\t{result[1]:35}\t{result[2]:>10}\t{result[3]}')
 
         # compare_entries()
         # for entry in entries_out:
