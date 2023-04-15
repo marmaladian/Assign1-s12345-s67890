@@ -168,6 +168,10 @@ class LinkedListSpreadsheet(BaseSpreadsheet):
         if rowIndex < -1 or rowIndex >= self.tail.value.head.value.row:
             return False
 
+        if rowIndex == -1:
+            self.appendRow()
+            return True
+
         # create new row and initialize it with empty cell that contains row number
         newRow = Node(DoubleLinkedList())
         emptyNodeCell = Node(
@@ -209,6 +213,11 @@ class LinkedListSpreadsheet(BaseSpreadsheet):
         """
         if colIndex < -1 or colIndex >= self.tail.value.head.value.col:
             return False
+
+        if colIndex == -1:
+            self.appendCol()
+            return True
+
         # traverse row list
         rowNode = self.head
         while rowNode is not None:
