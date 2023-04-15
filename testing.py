@@ -106,7 +106,7 @@ if __name__ == '__main__':
             ]
 
             for test in tests:
-                print('executing: ', test[0])
+                print('executing: ', test[0], '\t', test[1])
                 results.append([test[0], test[1], 'array', timeit.timeit(lambda: find_test_helper(array, test[2]()), number=iterations)])
                 results.append([test[0], test[1], 'linked_list', timeit.timeit(lambda: find_test_helper(linked_list, test[2]()), number=iterations)])
                 results.append([test[0], test[1], 'csr', timeit.timeit(lambda: find_test_helper(csr, test[2]()), number=iterations)])
@@ -148,13 +148,13 @@ if __name__ == '__main__':
             ]
 
             for test in row_tests:
-                print('executing: ', test[0])
+                print('executing: ', test[0], '\t', test[1])
                 results.append([test[0], test[1], 'array', timeit.timeit(lambda: insert_row_test_helper(array, test[2]()), number=iterations)])
                 results.append([test[0], test[1], 'linked_list', timeit.timeit(lambda: insert_row_test_helper(linked_list, test[2]()), number=iterations)])
                 results.append([test[0], test[1], 'csr', timeit.timeit(lambda: insert_row_test_helper(csr, test[2]()), number=iterations)])
 
             for test in col_tests:
-                print('executing: ', test[0])
+                print('executing: ', test[0], '\t', test[1])
                 results.append([test[0], test[1], 'array', timeit.timeit(lambda: insert_col_test_helper(array, test[2]()), number=iterations)])
                 results.append([test[0], test[1], 'linked_list', timeit.timeit(lambda: insert_col_test_helper(linked_list, test[2]()), number=iterations)])
                 results.append([test[0], test[1], 'csr', timeit.timeit(lambda: insert_col_test_helper(csr, test[2]()), number=iterations)])
@@ -184,7 +184,7 @@ if __name__ == '__main__':
             ]
 
             for test in tests:
-                print('executing: ', test[0])
+                print('executing: ', test[0], '\t', test[1])
                 results.append([test[0], test[1], 'array', timeit.timeit(lambda: update_test_helper(array, test[2](), test[3](), update_value), number=iterations)])
                 results.append([test[0], test[1], 'linked_list', timeit.timeit(lambda: update_test_helper(linked_list, test[2](), test[3](), update_value), number=iterations)])
                 results.append([test[0], test[1], 'csr', timeit.timeit(lambda: update_test_helper(csr, test[2](), test[3](), update_value), number=iterations)])
