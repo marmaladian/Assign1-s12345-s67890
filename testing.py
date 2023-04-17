@@ -256,5 +256,5 @@ if __name__ == '__main__':
         #         print(entry, end='\t')
         #     print()
 
-    for _ in range (0, 10):
+    for _ in range (0, 1):
         run()
