@@ -221,14 +221,14 @@ if __name__ == '__main__':
         dataGenerator.dataGen(data_dir, small * 10, small // 10,    1.0, -100000, 100000)
 
         # medium spreadsheets
-        medium = 250
-        dataGenerator.dataGen(data_dir, medium, medium,             0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, medium // 10, medium * 10,  0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  0.3, -100000, 100000)
+        # medium = 250
+        # dataGenerator.dataGen(data_dir, medium, medium,             0.3, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, medium // 10, medium * 10,  0.3, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  0.3, -100000, 100000)
         
-        dataGenerator.dataGen(data_dir, medium, medium,             1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, medium // 10, medium * 10,  1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  1.0, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, medium, medium,             1.0, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, medium // 10, medium * 10,  1.0, -100000, 100000)
+        # dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  1.0, -100000, 100000)
 
         # large spreadsheets
         # large = 500
@@ -249,7 +249,7 @@ if __name__ == '__main__':
         print(f'{len(results)} tests completed.')
         print('---------------------------------------------------------------------------------------------------------------------------------')
         for result in results:
-            print(f'{result[0]:35}\t{result[1]:35}\t{result[2]:>10}\t{result[3]}')
+            print(f'{result[0]:35}\t{result[1]:37}\t{result[2]:>10}\t{result[3]}')
 
         # compare_entries()
         # for entry in entries_out:

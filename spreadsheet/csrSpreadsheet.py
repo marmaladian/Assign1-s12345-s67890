@@ -89,7 +89,8 @@ class CSRSpreadsheet(BaseSpreadsheet):
         success = False
         if colIndex == -1:
             self.appendCol()
-        elif 0 <= colIndex <= self.num_cols:
+        # elif 0 <= colIndex <= self.num_cols:
+        elif 0 <= colIndex < self.num_cols:
             for index in range(0, len(self.cola)):
                 if self.cola[index] >= colIndex:
                     self.cola[index] += 1
@@ -129,8 +130,6 @@ class CSRSpreadsheet(BaseSpreadsheet):
                     existing_cell = True
                     break
                 index += 1
-                # if self.cola[index] > colIndex:
-                #     break
                         
             # now we know where we need to update/delete/insert
             if existing_cell:
