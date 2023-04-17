@@ -1,5 +1,6 @@
 import os
 import random
+import time
 import timeit
 import csv
 from spreadsheet.cell import Cell
@@ -255,4 +256,5 @@ if __name__ == '__main__':
         #         print(entry, end='\t')
         #     print()
 
-    run()
+    for _ in range (0, 10):
+        run()
