@@ -205,13 +205,9 @@ if __name__ == '__main__':
             entries_out.append([data_desc, 'csr', csr.entries()])
             
 
-    def run():
-        # delete existing files in data directory
-        # remove_data_files()
-        
+    def generate_data_files():
         print('Generating new data files...')
-        # create source data
-        
+
         sizes = [10, 32, 100, 316, 1000]
         densities = [0.33, 0.66, 1.0]
         (min_val, max_val) = [-100000, 1000000]
@@ -220,8 +216,12 @@ if __name__ == '__main__':
             for density in densities:
                 dataGenerator.dataGen(data_dir, sz, sz,             density, min_val, max_val)
                 dataGenerator.dataGen(data_dir, sz // 10, sz  * 10, density, min_val, max_val)
-                dataGenerator.dataGen(data_dir, sz  * 10, sz // 10, density, min_val, max_val)
+                dataGenerator.dataGen(data_dir, sz  * 10, sz // 10, density, min_val, max_val)       
 
+    def run():
+        # remove_data_files()
+        # generate_data_files()
+    
         print('Starting tests...')
 
         if (get_data_files()):

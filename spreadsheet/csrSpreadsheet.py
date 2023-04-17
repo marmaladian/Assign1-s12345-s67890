@@ -118,6 +118,9 @@ class CSRSpreadsheet(BaseSpreadsheet):
 
         @return True if cell can be updated.  False if cannot, e.g., row or column indices do not exist.
         """
+
+        if (colIndex == 0):
+            print(f'{rowIndex}')
         can_update = True
         existing_cell = False
 

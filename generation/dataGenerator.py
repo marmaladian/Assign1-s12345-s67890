@@ -21,7 +21,7 @@ def dataGen(directory, numRows, numCols, filled, lowVal, highVal):
 
         # Loop through each cell in the spreadsheet
         for row in range(numRows):
-            for col in range(numCols):
+            for col in range(numCols - 1, -1, -1):
                 # Fill probability
                 if random.random() < filled:
                     # Generate a randomised value
