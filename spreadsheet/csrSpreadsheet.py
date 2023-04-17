@@ -26,21 +26,12 @@ class CSRSpreadsheet(BaseSpreadsheet):
         @param lCells: list of cells to be stored
         """
         for cell in lCells:
-            while cell.row >= self.num_rows():
+            while not self.update(cell.row, cell.col, cell.val):
+                # well, we gotta add the row or column.
+                if cell.row >= self.num_rows():
                     self.appendRow()
-            while cell.col >= self.num_cols:
+                if cell.col >= self.num_cols:
                     self.appendCol()
-            success = self.update(cell.row, cell.col, cell.val)
-            if not success:
-                print('?')
-
-            # have commented this version out hoping the above is quicker for the test generation
-            # while not self.update(cell.row, cell.col, cell.val):
-            #     # well, we gotta add the row or column.
-            #     if cell.row >= self.num_rows():
-            #         self.appendRow()
-            #     if cell.col >= self.num_cols:
-            #         self.appendCol()
 
         # self.print_spreadsheet()
 
