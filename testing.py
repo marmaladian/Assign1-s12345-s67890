@@ -226,12 +226,12 @@ if __name__ == '__main__':
 
         if (get_data_files()):
             create_spreadsheets()
-            test_find(10)
-            test_insert(10)
-            test_update(10)
+            test_find(1000)
+            test_insert(1000)
+            test_update(1000)
             
         # create a new file for writing
-        with open('testresults.csv', mode='w', newline='') as results_file:
+        with open('testresults_raw.csv', mode='w', newline='') as results_file:
             results_writer = csv.writer(results_file, delimiter=',')
 
             # write the header row
