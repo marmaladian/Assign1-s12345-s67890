@@ -1,0 +1,1081 @@
+implementation,action,num_rows,num_cols,filled,time
+array,find: existing value,10000,100,0.3,0.7906850999997914
+linked_list,find: existing value,10000,100,0.3,0.015620499999840831
+csr,find: existing value,10000,100,0.3,1.7551188000002185
+array,find: non-existing value,10000,100,0.3,0.7845830000001115
+linked_list,find: non-existing value,10000,100,0.3,0.015997299999980896
+csr,find: non-existing value,10000,100,0.3,1.753671000000395
+array,find: existing value,10000,100,1.0,1.2596080999996957
+linked_list,find: existing value,10000,100,1.0,0.016541399999823625
+csr,find: existing value,10000,100,1.0,2.6579137000003357
+array,find: non-existing value,10000,100,1.0,1.235753299999942
+linked_list,find: non-existing value,10000,100,1.0,0.017798599999878206
+csr,find: non-existing value,10000,100,1.0,2.6388403999999355
+array,find: existing value,1000,1000,0.3,0.8312536999997064
+linked_list,find: existing value,1000,1000,0.3,0.0018844999999600986
+csr,find: existing value,1000,1000,0.3,1.912057100000311
+array,find: non-existing value,1000,1000,0.3,0.8147620999998253
+linked_list,find: non-existing value,1000,1000,0.3,0.0018817999998645973
+csr,find: non-existing value,1000,1000,0.3,1.9820465999996486
+array,find: existing value,1000,1000,1.0,1.3562642000001688
+linked_list,find: existing value,1000,1000,1.0,0.002437199999803852
+csr,find: existing value,1000,1000,1.0,2.9355961000001116
+array,find: non-existing value,1000,1000,1.0,1.329050400000142
+linked_list,find: non-existing value,1000,1000,1.0,0.0024146000000655476
+csr,find: non-existing value,1000,1000,1.0,3.0417418000001817
+array,find: existing value,100,10000,0.3,0.8458851999998842
+linked_list,find: existing value,100,10000,0.3,0.0025342999997519655
+csr,find: existing value,100,10000,0.3,1.878194700000222
+array,find: non-existing value,100,10000,0.3,0.8191582000004018
+linked_list,find: non-existing value,100,10000,0.3,0.0024355000000468863
+csr,find: non-existing value,100,10000,0.3,1.914628399999856
+array,find: existing value,100,10000,1.0,1.369517999999971
+linked_list,find: existing value,100,10000,1.0,0.008271699999568227
+csr,find: existing value,100,10000,1.0,3.1742615999996815
+array,find: non-existing value,100,10000,1.0,1.5305302000001575
+linked_list,find: non-existing value,100,10000,1.0,0.008670500000334869
+csr,find: non-existing value,100,10000,1.0,3.1335118000001785
+array,find: existing value,2500,25,0.3,0.07119939999984126
+linked_list,find: existing value,2500,25,0.3,0.006191500000113592
+csr,find: existing value,2500,25,0.3,0.1248967999999877
+array,find: non-existing value,2500,25,0.3,0.061706499999672815
+linked_list,find: non-existing value,2500,25,0.3,0.004856200000176614
+csr,find: non-existing value,2500,25,0.3,0.12612459999991188
+array,find: existing value,2500,25,1.0,0.11798419999968246
+linked_list,find: existing value,2500,25,1.0,0.004593900000145368
+csr,find: existing value,2500,25,1.0,0.1781344999999419
+array,find: non-existing value,2500,25,1.0,0.16369489999988218
+linked_list,find: non-existing value,2500,25,1.0,0.010837599999831582
+csr,find: non-existing value,2500,25,1.0,0.23508480000009513
+array,find: existing value,250,250,0.3,0.05364460000009785
+linked_list,find: existing value,250,250,0.3,0.0004565999997794279
+csr,find: existing value,250,250,0.3,0.12614450000000943
+array,find: non-existing value,250,250,0.3,0.08528699999988021
+linked_list,find: non-existing value,250,250,0.3,0.0005851000000802742
+csr,find: non-existing value,250,250,0.3,0.13534370000024865
+array,find: existing value,250,250,1.0,0.08882330000005823
+linked_list,find: existing value,250,250,1.0,0.0006032000001141569
+csr,find: existing value,250,250,1.0,0.24563669999997728
+array,find: non-existing value,250,250,1.0,0.23400549999996656
+linked_list,find: non-existing value,250,250,1.0,0.0006713000002491754
+csr,find: non-existing value,250,250,1.0,0.20813219999990906
+array,find: existing value,25,2500,0.3,0.07670499999994718
+linked_list,find: existing value,25,2500,0.3,0.0007625999996889732
+csr,find: existing value,25,2500,0.3,0.14030700000012075
+array,find: non-existing value,25,2500,0.3,0.06626909999977215
+linked_list,find: non-existing value,25,2500,0.3,0.0006988000000092143
+csr,find: non-existing value,25,2500,0.3,0.25216760000012073
+array,find: existing value,25,2500,1.0,0.09919970000009926
+linked_list,find: existing value,25,2500,1.0,0.0023012999999991735
+csr,find: existing value,25,2500,1.0,0.18775390000018888
+array,find: non-existing value,25,2500,1.0,0.08040369999980612
+linked_list,find: non-existing value,25,2500,1.0,0.0019270000002507004
+csr,find: non-existing value,25,2500,1.0,0.17583849999982704
+array,find: existing value,5000,50,0.3,0.21753179999996064
+linked_list,find: existing value,5000,50,0.3,0.008971499999915977
+csr,find: existing value,5000,50,0.3,0.5135622000002513
+array,find: non-existing value,5000,50,0.3,0.21574349999991682
+linked_list,find: non-existing value,5000,50,0.3,0.009111699999721168
+csr,find: non-existing value,5000,50,0.3,0.5200639999998202
+array,find: existing value,5000,50,1.0,0.4796919999998863
+linked_list,find: existing value,5000,50,1.0,0.01008209999963583
+csr,find: existing value,5000,50,1.0,0.7631365000002006
+array,find: non-existing value,5000,50,1.0,0.3881818999998359
+linked_list,find: non-existing value,5000,50,1.0,0.008606200000031095
+csr,find: non-existing value,5000,50,1.0,0.7991110999996636
+array,find: existing value,500,500,0.3,0.2675804000000426
+linked_list,find: existing value,500,500,0.3,0.0018744000003607653
+csr,find: existing value,500,500,0.3,0.6106655999997201
+array,find: non-existing value,500,500,0.3,0.22901930000034554
+linked_list,find: non-existing value,500,500,0.3,0.0009961000000657805
+csr,find: non-existing value,500,500,0.3,0.6472444999999425
+array,find: existing value,500,500,1.0,0.5419154999999591
+linked_list,find: existing value,500,500,1.0,0.0020823999998356157
+csr,find: existing value,500,500,1.0,0.9125472999999147
+array,find: non-existing value,500,500,1.0,0.3729880000000776
+linked_list,find: non-existing value,500,500,1.0,0.00136880000036399
+csr,find: non-existing value,500,500,1.0,0.8074100999997427
+array,find: existing value,500,5,0.3,0.00396439999985887
+linked_list,find: existing value,500,5,0.3,0.0008057999998527521
+csr,find: existing value,500,5,0.3,0.004335099999934755
+array,find: non-existing value,500,5,0.3,0.0039316999996117374
+linked_list,find: non-existing value,500,5,0.3,0.0008327999998982705
+csr,find: non-existing value,500,5,0.3,0.0041440999998485495
+array,find: existing value,500,5,1.0,0.005083300000023883
+linked_list,find: existing value,500,5,1.0,0.0009276000000681961
+csr,find: existing value,500,5,1.0,0.007021899999926973
+array,find: non-existing value,500,5,1.0,0.0056847999999263266
+linked_list,find: non-existing value,500,5,1.0,0.0008064999997259292
+csr,find: non-existing value,500,5,1.0,0.007385400000202935
+array,find: existing value,50,5000,0.3,0.3355138000001716
+linked_list,find: existing value,50,5000,0.3,0.0029277000003276044
+csr,find: existing value,50,5000,0.3,0.7343728999999257
+array,find: non-existing value,50,5000,0.3,0.3403731999997035
+linked_list,find: non-existing value,50,5000,0.3,0.0017410999998901389
+csr,find: non-existing value,50,5000,0.3,0.8221791999999368
+array,find: existing value,50,5000,1.0,0.5350545999999667
+linked_list,find: existing value,50,5000,1.0,0.006678700000065874
+csr,find: existing value,50,5000,1.0,1.0156444999997802
+array,find: non-existing value,50,5000,1.0,0.4772963999998865
+linked_list,find: non-existing value,50,5000,1.0,0.004761600000165345
+csr,find: non-existing value,50,5000,1.0,0.7924269999998614
+array,find: existing value,50,50,0.3,0.0023576000003231457
+linked_list,find: existing value,50,50,0.3,9.490000002188026e-05
+csr,find: existing value,50,50,0.3,0.0076886000001650245
+array,find: non-existing value,50,50,0.3,0.00227309999991121
+linked_list,find: non-existing value,50,50,0.3,0.00010399999973742524
+csr,find: non-existing value,50,50,0.3,0.0054879999997865525
+array,find: existing value,50,50,1.0,0.0034497000001465494
+linked_list,find: existing value,50,50,1.0,0.00013559999979406712
+csr,find: existing value,50,50,1.0,0.007183700000041426
+array,find: non-existing value,50,50,1.0,0.0038333000002239714
+linked_list,find: non-existing value,50,50,1.0,0.00012080000033165561
+csr,find: non-existing value,50,50,1.0,0.006764599999769416
+array,find: existing value,5,500,0.3,0.004260900000190304
+linked_list,find: existing value,5,500,0.3,0.00013390000003710156
+csr,find: existing value,5,500,0.3,0.004712699999799952
+array,find: non-existing value,5,500,0.3,0.002626400000281137
+linked_list,find: non-existing value,5,500,0.3,0.00012029999970764038
+csr,find: non-existing value,5,500,0.3,0.004556400000183203
+array,find: existing value,5,500,1.0,0.003344799999922543
+linked_list,find: existing value,5,500,1.0,0.001034099999742466
+csr,find: existing value,5,500,1.0,0.021943300000202726
+array,find: non-existing value,5,500,1.0,0.0037366000001384236
+linked_list,find: non-existing value,5,500,1.0,0.00054439999985334
+csr,find: non-existing value,5,500,1.0,0.007102100000338396
+array,insert: row at start,10000,100,0.3,1.1144195000001673
+linked_list,insert: row at start,10000,100,0.3,0.04416810000020632
+csr,insert: row at start,10000,100,0.3,9.760000011738157e-05
+array,insert: row at end,10000,100,0.3,0.0021896000002925575
+linked_list,insert: row at end,10000,100,0.3,0.03416720000041096
+csr,insert: row at end,10000,100,0.3,1.1699999959091656e-05
+array,insert: row after end,10000,100,0.3,5.699999746866524e-06
+linked_list,insert: row after end,10000,100,0.3,0.016970099999980448
+csr,insert: row after end,10000,100,0.3,7.499999810534064e-06
+array,insert: row into middle,10000,100,0.3,0.6178587999997944
+linked_list,insert: row into middle,10000,100,0.3,0.03445560000000114
+csr,insert: row into middle,10000,100,0.3,3.060000017285347e-05
+array,insert: row at random pos.,10000,100,0.3,0.30449480000015683
+linked_list,insert: row at random pos.,10000,100,0.3,0.04979680000042208
+csr,insert: row at random pos.,10000,100,0.3,5.609999971056823e-05
+array,insert: col at start,10000,100,0.3,2.8657091999998556
+linked_list,insert: col at start,10000,100,0.3,0.23802599999999074
+csr,insert: col at start,10000,100,0.3,0.37325179999970715
+array,insert: col at end,10000,100,0.3,0.2819767999999385
+linked_list,insert: col at end,10000,100,0.3,0.4053804999998647
+csr,insert: col at end,10000,100,0.3,0.193854999999985
+array,insert: col after end,10000,100,0.3,9.299999874201603e-06
+linked_list,insert: col after end,10000,100,0.3,0.13013599999976577
+csr,insert: col after end,10000,100,0.3,8.200000138458563e-06
+array,insert: col into middle,10000,100,0.3,1.1148732000001473
+linked_list,insert: col into middle,10000,100,0.3,0.5657239000001937
+csr,insert: col into middle,10000,100,0.3,0.2656840999998167
+array,insert: col at random pos.,10000,100,0.3,1.191787999999633
+linked_list,insert: col at random pos.,10000,100,0.3,0.875199000000066
+csr,insert: col at random pos.,10000,100,0.3,0.2973535000000993
+array,insert: row at start,10000,100,1.0,1.7355851000002076
+linked_list,insert: row at start,10000,100,1.0,0.03133640000032756
+csr,insert: row at start,10000,100,1.0,4.49000003754918e-05
+array,insert: row at end,10000,100,1.0,0.0021283999999468506
+linked_list,insert: row at end,10000,100,1.0,0.02865029999975377
+csr,insert: row at end,10000,100,1.0,9.100000170292333e-06
+array,insert: row after end,10000,100,1.0,4.699999863078119e-06
+linked_list,insert: row after end,10000,100,1.0,0.0131282000002102
+csr,insert: row after end,10000,100,1.0,6.699999630654929e-06
+array,insert: row into middle,10000,100,1.0,0.8391091999997116
+linked_list,insert: row into middle,10000,100,1.0,0.029982600000039383
+csr,insert: row into middle,10000,100,1.0,2.859999995052931e-05
+array,insert: row at random pos.,10000,100,1.0,1.0844592000003104
+linked_list,insert: row at random pos.,10000,100,1.0,0.030373099999906117
+csr,insert: row at random pos.,10000,100,1.0,3.5600000046542846e-05
+array,insert: col at start,10000,100,1.0,3.303964000000178
+linked_list,insert: col at start,10000,100,1.0,0.1986690999997336
+csr,insert: col at start,10000,100,1.0,1.1329722000000402
+array,insert: col at end,10000,100,1.0,0.4373305999997683
+linked_list,insert: col at end,10000,100,1.0,0.3880255000003672
+csr,insert: col at end,10000,100,1.0,0.6016833999997289
+array,insert: col after end,10000,100,1.0,2.4399999801971717e-05
+linked_list,insert: col after end,10000,100,1.0,0.11871620000010807
+csr,insert: col after end,10000,100,1.0,1.539999993838137e-05
+array,insert: col into middle,10000,100,1.0,2.6697994999999537
+linked_list,insert: col into middle,10000,100,1.0,0.5758335999998963
+csr,insert: col into middle,10000,100,1.0,1.1273256999998011
+array,insert: col at random pos.,10000,100,1.0,3.425214700000197
+linked_list,insert: col at random pos.,10000,100,1.0,1.0882292999999663
+csr,insert: col at random pos.,10000,100,1.0,1.2016030999998293
+array,insert: row at start,1000,1000,0.3,1.1425580999998601
+linked_list,insert: row at start,1000,1000,0.3,0.0035312999998495798
+csr,insert: row at start,1000,1000,0.3,1.3899999885325087e-05
+array,insert: row at end,1000,1000,0.3,0.013685699999768985
+linked_list,insert: row at end,1000,1000,0.3,0.0027995000000373693
+csr,insert: row at end,1000,1000,0.3,9.500000032858225e-06
+array,insert: row after end,1000,1000,0.3,5.099999725644011e-06
+linked_list,insert: row after end,1000,1000,0.3,0.0013374000000112574
+csr,insert: row after end,1000,1000,0.3,5.8999999055231456e-06
+array,insert: row into middle,1000,1000,0.3,0.5592476000001625
+linked_list,insert: row into middle,1000,1000,0.3,0.00335399999994479
+csr,insert: row into middle,1000,1000,0.3,1.1799999811046291e-05
+array,insert: row at random pos.,1000,1000,0.3,0.5746198000001641
+linked_list,insert: row at random pos.,1000,1000,0.3,0.0036430999998628977
+csr,insert: row at random pos.,1000,1000,0.3,5.199999986871262e-05
+array,insert: col at start,1000,1000,0.3,1.4881977000000006
+linked_list,insert: col at start,1000,1000,0.3,0.023115099999813538
+csr,insert: col at start,1000,1000,0.3,0.3687254000001303
+array,insert: col at end,1000,1000,0.3,0.02169789999970817
+linked_list,insert: col at end,1000,1000,0.3,0.042762799999763956
+csr,insert: col at end,1000,1000,0.3,0.171115699999973
+array,insert: col after end,1000,1000,0.3,9.899999895424116e-06
+linked_list,insert: col after end,1000,1000,0.3,0.013546300000143674
+csr,insert: col after end,1000,1000,0.3,8.900000011635711e-06
+array,insert: col into middle,1000,1000,0.3,0.7404349000003094
+linked_list,insert: col into middle,1000,1000,0.3,0.046801500000128726
+csr,insert: col into middle,1000,1000,0.3,0.3115869000002931
+array,insert: col at random pos.,1000,1000,0.3,0.814315500000248
+linked_list,insert: col at random pos.,1000,1000,0.3,0.08378949999996621
+csr,insert: col at random pos.,1000,1000,0.3,0.26260580000007394
+array,insert: row at start,1000,1000,1.0,1.708027800000309
+linked_list,insert: row at start,1000,1000,1.0,0.003136100000119768
+csr,insert: row at start,1000,1000,1.0,1.160000010713702e-05
+array,insert: row at end,1000,1000,1.0,0.02059129999997822
+linked_list,insert: row at end,1000,1000,1.0,0.0024769000001469976
+csr,insert: row at end,1000,1000,1.0,8.099999831756577e-06
+array,insert: row after end,1000,1000,1.0,4.399999852466863e-06
+linked_list,insert: row after end,1000,1000,1.0,0.001192700000046898
+csr,insert: row after end,1000,1000,1.0,5.699999746866524e-06
+array,insert: row into middle,1000,1000,1.0,1.0148456000001715
+linked_list,insert: row into middle,1000,1000,1.0,0.0031816999999136897
+csr,insert: row into middle,1000,1000,1.0,1.1999999969702912e-05
+array,insert: row at random pos.,1000,1000,1.0,1.1280699999997523
+linked_list,insert: row at random pos.,1000,1000,1.0,0.003033200000118086
+csr,insert: row at random pos.,1000,1000,1.0,1.9999999949504854e-05
+array,insert: col at start,1000,1000,1.0,2.8505489000003763
+linked_list,insert: col at start,1000,1000,1.0,0.024003199999697244
+csr,insert: col at start,1000,1000,1.0,1.2090838000003714
+array,insert: col at end,1000,1000,1.0,0.034042800000406714
+linked_list,insert: col at end,1000,1000,1.0,0.04133690000026036
+csr,insert: col at end,1000,1000,1.0,0.702477700000145
+array,insert: col after end,1000,1000,1.0,5.8999999055231456e-06
+linked_list,insert: col after end,1000,1000,1.0,0.01409109999985958
+csr,insert: col after end,1000,1000,1.0,9.200000022246968e-06
+array,insert: col into middle,1000,1000,1.0,1.3642641999999796
+linked_list,insert: col into middle,1000,1000,1.0,0.04856020000033823
+csr,insert: col into middle,1000,1000,1.0,0.9173200999998699
+array,insert: col at random pos.,1000,1000,1.0,1.4618703000001005
+linked_list,insert: col at random pos.,1000,1000,1.0,0.07699610000008761
+csr,insert: col at random pos.,1000,1000,1.0,0.844006299999819
+array,insert: row at start,100,10000,0.3,0.9713057999997545
+linked_list,insert: row at start,100,10000,0.3,0.000331800000367366
+csr,insert: row at start,100,10000,0.3,8.800000159681076e-06
+array,insert: row at end,100,10000,0.3,0.13005040000007284
+linked_list,insert: row at end,100,10000,0.3,0.0003560000000106811
+csr,insert: row at end,100,10000,0.3,8.900000011635711e-06
+array,insert: row after end,100,10000,0.3,5.099999725644011e-06
+linked_list,insert: row after end,100,10000,0.3,0.00019949999978052801
+csr,insert: row after end,100,10000,0.3,1.6199999663513154e-05
+array,insert: row into middle,100,10000,0.3,0.6569586999999046
+linked_list,insert: row into middle,100,10000,0.3,0.00039239999978235574
+csr,insert: row into middle,100,10000,0.3,8.200000138458563e-06
+array,insert: row at random pos.,100,10000,0.3,0.717959300000075
+linked_list,insert: row at random pos.,100,10000,0.3,0.0004925000002913293
+csr,insert: row at random pos.,100,10000,0.3,1.7699999716569437e-05
+array,insert: col at start,100,10000,0.3,1.3940369000001738
+linked_list,insert: col at start,100,10000,0.3,0.008305199999995239
+csr,insert: col at start,100,10000,0.3,0.3666870000001836
+array,insert: col at end,100,10000,0.3,0.0017413999999007501
+linked_list,insert: col at end,100,10000,0.3,0.009376900000006572
+csr,insert: col at end,100,10000,0.3,0.16822169999977632
+array,insert: col after end,100,10000,0.3,5.500000042957254e-06
+linked_list,insert: col after end,100,10000,0.3,0.0015819000000192318
+csr,insert: col after end,100,10000,0.3,5.80000005356851e-06
+array,insert: col into middle,100,10000,0.3,0.6846805999998651
+linked_list,insert: col into middle,100,10000,0.3,0.009911299999657786
+csr,insert: col into middle,100,10000,0.3,0.26430329999993774
+array,insert: col at random pos.,100,10000,0.3,0.5956169999999474
+linked_list,insert: col at random pos.,100,10000,0.3,0.013532200000099692
+csr,insert: col at random pos.,100,10000,0.3,0.2873085999999603
+array,insert: row at start,100,10000,1.0,1.5536831000003986
+linked_list,insert: row at start,100,10000,1.0,0.00033040000016626436
+csr,insert: row at start,100,10000,1.0,9.100000170292333e-06
+array,insert: row at end,100,10000,1.0,0.1913140999999996
+linked_list,insert: row at end,100,10000,1.0,0.0003208000002814515
+csr,insert: row at end,100,10000,1.0,8.799999704933725e-06
+array,insert: row after end,100,10000,1.0,4.499999704421498e-06
+linked_list,insert: row after end,100,10000,1.0,0.00017389999993611127
+csr,insert: row after end,100,10000,1.0,7.60000011723605e-06
+array,insert: row into middle,100,10000,1.0,1.0439690000002884
+linked_list,insert: row into middle,100,10000,1.0,0.00041079999982684967
+csr,insert: row into middle,100,10000,1.0,9.199999567499617e-06
+array,insert: row at random pos.,100,10000,1.0,1.2802483000000393
+linked_list,insert: row at random pos.,100,10000,1.0,0.0005163999999240332
+csr,insert: row at random pos.,100,10000,1.0,1.8700000055105193e-05
+array,insert: col at start,100,10000,1.0,2.7918552000001
+linked_list,insert: col at start,100,10000,1.0,0.021359299999858194
+csr,insert: col at start,100,10000,1.0,1.2762840000000324
+array,insert: col at end,100,10000,1.0,0.002687100000002829
+linked_list,insert: col at end,100,10000,1.0,0.015312600000015664
+csr,insert: col at end,100,10000,1.0,0.5803461999998945
+array,insert: col after end,100,10000,1.0,6.300000222836388e-06
+linked_list,insert: col after end,100,10000,1.0,0.00166399999989153
+csr,insert: col after end,100,10000,1.0,6.000000212225132e-06
+array,insert: col into middle,100,10000,1.0,1.3003137000000606
+linked_list,insert: col into middle,100,10000,1.0,0.019704400000136957
+csr,insert: col into middle,100,10000,1.0,0.8814484999998058
+array,insert: col at random pos.,100,10000,1.0,1.3007496000000174
+linked_list,insert: col at random pos.,100,10000,1.0,0.028256499999770313
+csr,insert: col at random pos.,100,10000,1.0,0.9827006000000438
+array,insert: row at start,2500,25,0.3,0.07883039999978791
+linked_list,insert: row at start,2500,25,0.3,0.008862499999850115
+csr,insert: row at start,2500,25,0.3,2.0700000277429353e-05
+array,insert: row at end,2500,25,0.3,0.0005086000001028879
+linked_list,insert: row at end,2500,25,0.3,0.0074697999998534215
+csr,insert: row at end,2500,25,0.3,1.8700000055105193e-05
+array,insert: row after end,2500,25,0.3,6.000000212225132e-06
+linked_list,insert: row after end,2500,25,0.3,0.0035281999998915126
+csr,insert: row after end,2500,25,0.3,8.50000014906982e-06
+array,insert: row into middle,2500,25,0.3,0.04041419999975915
+linked_list,insert: row into middle,2500,25,0.3,0.008222899999964284
+csr,insert: row into middle,2500,25,0.3,1.5999999959603883e-05
+array,insert: row at random pos.,2500,25,0.3,0.04895880000003672
+linked_list,insert: row at random pos.,2500,25,0.3,0.008101200000055542
+csr,insert: row at random pos.,2500,25,0.3,2.7800000225397525e-05
+array,insert: col at start,2500,25,0.3,0.0807543999999325
+linked_list,insert: col at start,2500,25,0.3,0.05249629999980243
+csr,insert: col at start,2500,25,0.3,0.021468499999627966
+array,insert: col at end,2500,25,0.3,0.050721600000088074
+linked_list,insert: col at end,2500,25,0.3,0.10805389999995896
+csr,insert: col at end,2500,25,0.3,0.016621800000393705
+array,insert: col after end,2500,25,0.3,7.100000402715523e-06
+linked_list,insert: col after end,2500,25,0.3,0.02948980000019219
+csr,insert: col after end,2500,25,0.3,8.200000138458563e-06
+array,insert: col into middle,2500,25,0.3,0.09379259999968781
+linked_list,insert: col into middle,2500,25,0.3,0.14399850000017977
+csr,insert: col into middle,2500,25,0.3,0.022381899999800225
+array,insert: col at random pos.,2500,25,0.3,0.12184899999965637
+linked_list,insert: col at random pos.,2500,25,0.3,0.31223720000025423
+csr,insert: col at random pos.,2500,25,0.3,0.025887699999657343
+array,insert: row at start,2500,25,1.0,0.17680709999967803
+linked_list,insert: row at start,2500,25,1.0,0.010474499999872933
+csr,insert: row at start,2500,25,1.0,2.6300000172341242e-05
+array,insert: row at end,2500,25,1.0,0.0021252000001368287
+linked_list,insert: row at end,2500,25,1.0,0.014260599999943224
+csr,insert: row at end,2500,25,1.0,1.0599999768601265e-05
+array,insert: row after end,2500,25,1.0,7.3999999585794285e-06
+linked_list,insert: row after end,2500,25,1.0,0.0030335999999806518
+csr,insert: row after end,2500,25,1.0,7.999999979801942e-06
+array,insert: row into middle,2500,25,1.0,0.06903060000013284
+linked_list,insert: row into middle,2500,25,1.0,0.008500599999933911
+csr,insert: row into middle,2500,25,1.0,1.5699999948992627e-05
+array,insert: row at random pos.,2500,25,1.0,0.0716498000001593
+linked_list,insert: row at random pos.,2500,25,1.0,0.008446199999980308
+csr,insert: row at random pos.,2500,25,1.0,2.3999999939405825e-05
+array,insert: col at start,2500,25,1.0,0.22319980000020223
+linked_list,insert: col at start,2500,25,1.0,0.06032779999986815
+csr,insert: col at start,2500,25,1.0,0.07624989999976606
+array,insert: col at end,2500,25,1.0,0.09023900000011054
+linked_list,insert: col at end,2500,25,1.0,0.1077370000002702
+csr,insert: col at end,2500,25,1.0,0.055807800000366115
+array,insert: col after end,2500,25,1.0,1.4600000213249587e-05
+linked_list,insert: col after end,2500,25,1.0,0.039339799999652314
+csr,insert: col after end,2500,25,1.0,9.099999715544982e-06
+array,insert: col into middle,2500,25,1.0,0.2530503999996654
+linked_list,insert: col into middle,2500,25,1.0,0.16230580000001282
+csr,insert: col into middle,2500,25,1.0,0.06708079999998517
+array,insert: col at random pos.,2500,25,1.0,0.21366549999993367
+linked_list,insert: col at random pos.,2500,25,1.0,0.2501196999996864
+csr,insert: col at random pos.,2500,25,1.0,0.0750966000000517
+array,insert: row at start,250,250,0.3,0.06103059999986726
+linked_list,insert: row at start,250,250,0.3,0.0008923999998842191
+csr,insert: row at start,250,250,0.3,1.0300000212737359e-05
+array,insert: row at end,250,250,0.3,0.0032620000001770677
+linked_list,insert: row at end,250,250,0.3,0.0007368999999926018
+csr,insert: row at end,250,250,0.3,1.0300000212737359e-05
+array,insert: row after end,250,250,0.3,4.999999873689376e-06
+linked_list,insert: row after end,250,250,0.3,0.0003814000001511886
+csr,insert: row after end,250,250,0.3,1.3800000033370452e-05
+array,insert: row into middle,250,250,0.3,0.048200700000052166
+linked_list,insert: row into middle,250,250,0.3,0.0009021999999276886
+csr,insert: row into middle,250,250,0.3,9.999999747378752e-06
+array,insert: row at random pos.,250,250,0.3,0.03686710000010862
+linked_list,insert: row at random pos.,250,250,0.3,0.0009724000001369859
+csr,insert: row at random pos.,250,250,0.3,1.8799999907059828e-05
+array,insert: col at start,250,250,0.3,0.09320419999994556
+linked_list,insert: col at start,250,250,0.3,0.006886499999836815
+csr,insert: col at start,250,250,0.3,0.023305400000026566
+array,insert: col at end,250,250,0.3,0.004796499999883963
+linked_list,insert: col at end,250,250,0.3,0.013502599999810627
+csr,insert: col at end,250,250,0.3,0.011956399999689893
+array,insert: col after end,250,250,0.3,6.199999916134402e-06
+linked_list,insert: col after end,250,250,0.3,0.003490999999939959
+csr,insert: col after end,250,250,0.3,6.499999926745659e-06
+array,insert: col into middle,250,250,0.3,0.04990189999989525
+linked_list,insert: col into middle,250,250,0.3,0.026062200000069424
+csr,insert: col into middle,250,250,0.3,0.018395000000055006
+array,insert: col at random pos.,250,250,0.3,0.04903359999980239
+linked_list,insert: col at random pos.,250,250,0.3,0.024997999999868625
+csr,insert: col at random pos.,250,250,0.3,0.018027099999926577
+array,insert: row at start,250,250,1.0,0.11190739999983634
+linked_list,insert: row at start,250,250,1.0,0.0008705000000190921
+csr,insert: row at start,250,250,1.0,1.0399999609944643e-05
+array,insert: row at end,250,250,1.0,0.0056217999999716994
+linked_list,insert: row at end,250,250,1.0,0.0007940000000417058
+csr,insert: row at end,250,250,1.0,1.6599999980826396e-05
+array,insert: row after end,250,250,1.0,4.900000021734741e-06
+linked_list,insert: row after end,250,250,1.0,0.0003876999999192776
+csr,insert: row after end,250,250,1.0,6.499999926745659e-06
+array,insert: row into middle,250,250,1.0,0.06068509999977323
+linked_list,insert: row into middle,250,250,1.0,0.0009627999997974257
+csr,insert: row into middle,250,250,1.0,1.990000009755022e-05
+array,insert: row at random pos.,250,250,1.0,0.049032899999929214
+linked_list,insert: row at random pos.,250,250,1.0,0.0009943999998540676
+csr,insert: row at random pos.,250,250,1.0,1.9300000076327706e-05
+array,insert: col at start,250,250,1.0,0.1733527999999751
+linked_list,insert: col at start,250,250,1.0,0.0070977999998831365
+csr,insert: col at start,250,250,1.0,0.07352800000035131
+array,insert: col at end,250,250,1.0,0.0067967999998472806
+linked_list,insert: col at end,250,250,1.0,0.017730399999891233
+csr,insert: col at end,250,250,1.0,0.03815259999964837
+array,insert: col after end,250,250,1.0,5.100000180391362e-06
+linked_list,insert: col after end,250,250,1.0,0.003267800000230636
+csr,insert: col after end,250,250,1.0,6.70000008540228e-06
+array,insert: col into middle,250,250,1.0,0.08509189999995215
+linked_list,insert: col into middle,250,250,1.0,0.025725800000145682
+csr,insert: col into middle,250,250,1.0,0.061946199999965756
+array,insert: col at random pos.,250,250,1.0,0.11154670000041733
+linked_list,insert: col at random pos.,250,250,1.0,0.0267374000000018
+csr,insert: col at random pos.,250,250,1.0,0.056773299999804294
+array,insert: row at start,25,2500,0.3,0.07943569999997635
+linked_list,insert: row at start,25,2500,0.3,0.0001260000003640016
+csr,insert: row at start,25,2500,0.3,9.40000018090359e-06
+array,insert: row at end,25,2500,0.3,0.03472570000030828
+linked_list,insert: row at end,25,2500,0.3,0.00014839999994364916
+csr,insert: row at end,25,2500,0.3,9.299999874201603e-06
+array,insert: row after end,25,2500,0.3,4.900000021734741e-06
+linked_list,insert: row after end,25,2500,0.3,8.730000035939156e-05
+csr,insert: row after end,25,2500,0.3,6.499999926745659e-06
+array,insert: row into middle,25,2500,0.3,0.08580329999995229
+linked_list,insert: row into middle,25,2500,0.3,0.0002362999998695159
+csr,insert: row into middle,25,2500,0.3,1.0599999768601265e-05
+array,insert: row at random pos.,25,2500,0.3,0.10340100000030361
+linked_list,insert: row at random pos.,25,2500,0.3,0.0002755000000433938
+csr,insert: row at random pos.,25,2500,0.3,1.699999984339229e-05
+array,insert: col at start,25,2500,0.3,0.14790260000017952
+linked_list,insert: col at start,25,2500,0.3,0.00801739999997153
+csr,insert: col at start,25,2500,0.3,0.026057099999889033
+array,insert: col at end,25,2500,0.3,0.002841399999852001
+linked_list,insert: col at end,25,2500,0.3,0.007332600000154343
+csr,insert: col at end,25,2500,0.3,0.019913699999960954
+array,insert: col after end,25,2500,0.3,8.50000014906982e-06
+linked_list,insert: col after end,25,2500,0.3,0.0017091999998228857
+csr,insert: col after end,25,2500,0.3,2.5100000129896216e-05
+array,insert: col into middle,25,2500,0.3,0.09530979999999545
+linked_list,insert: col into middle,25,2500,0.3,0.006637400000272464
+csr,insert: col into middle,25,2500,0.3,0.019147699999848555
+array,insert: col at random pos.,25,2500,0.3,0.06672280000020692
+linked_list,insert: col at random pos.,25,2500,0.3,0.006621900000027381
+csr,insert: col at random pos.,25,2500,0.3,0.028659999999945285
+array,insert: row at start,25,2500,1.0,0.12624099999993632
+linked_list,insert: row at start,25,2500,1.0,0.00012969999988854397
+csr,insert: row at start,25,2500,1.0,9.999999747378752e-06
+array,insert: row at end,25,2500,1.0,0.06027409999978772
+linked_list,insert: row at end,25,2500,1.0,0.00016219999997701962
+csr,insert: row at end,25,2500,1.0,1.0899999779212521e-05
+array,insert: row after end,25,2500,1.0,1.2900000001536682e-05
+linked_list,insert: row after end,25,2500,1.0,9.500000032858225e-05
+csr,insert: row after end,25,2500,1.0,6.600000233447645e-06
+array,insert: row into middle,25,2500,1.0,0.1233724999997321
+linked_list,insert: row into middle,25,2500,1.0,0.0002241000001959037
+csr,insert: row into middle,25,2500,1.0,1.049999991664663e-05
+array,insert: row at random pos.,25,2500,1.0,0.18310199999996257
+linked_list,insert: row at random pos.,25,2500,1.0,0.00046300000030896626
+csr,insert: row at random pos.,25,2500,1.0,1.83000001925393e-05
+array,insert: col at start,25,2500,1.0,0.22172580000005837
+linked_list,insert: col at start,25,2500,1.0,0.006656999999904656
+csr,insert: col at start,25,2500,1.0,0.0829532000002473
+array,insert: col at end,25,2500,1.0,0.001084900000023481
+linked_list,insert: col at end,25,2500,1.0,0.004692999999861058
+csr,insert: col at end,25,2500,1.0,0.03859389999979612
+array,insert: col after end,25,2500,1.0,6.499999926745659e-06
+linked_list,insert: col after end,25,2500,1.0,0.0009276000000681961
+csr,insert: col after end,25,2500,1.0,1.3200000012147939e-05
+array,insert: col into middle,25,2500,1.0,0.11136769999984608
+linked_list,insert: col into middle,25,2500,1.0,0.007145999999920605
+csr,insert: col into middle,25,2500,1.0,0.05843910000021424
+array,insert: col at random pos.,25,2500,1.0,0.10385820000010426
+linked_list,insert: col at random pos.,25,2500,1.0,0.013570800000252348
+csr,insert: col at random pos.,25,2500,1.0,0.08034660000021177
+array,insert: row at start,5000,50,0.3,0.30642790000001696
+linked_list,insert: row at start,5000,50,0.3,0.019749900000078924
+csr,insert: row at start,5000,50,0.3,2.9799999992974335e-05
+array,insert: row at end,5000,50,0.3,0.0007202000001598208
+linked_list,insert: row at end,5000,50,0.3,0.01846350000005259
+csr,insert: row at end,5000,50,0.3,1.0700000075303251e-05
+array,insert: row after end,5000,50,0.3,5.200000032345997e-06
+linked_list,insert: row after end,5000,50,0.3,0.006707600000027014
+csr,insert: row after end,5000,50,0.3,7.999999979801942e-06
+array,insert: row into middle,5000,50,0.3,0.15457519999972646
+linked_list,insert: row into middle,5000,50,0.3,0.017255300000215357
+csr,insert: row into middle,5000,50,0.3,2.9099999665049836e-05
+array,insert: row at random pos.,5000,50,0.3,0.08452570000008564
+linked_list,insert: row at random pos.,5000,50,0.3,0.015594399999827147
+csr,insert: row at random pos.,5000,50,0.3,4.089999993084348e-05
+array,insert: col at start,5000,50,0.3,0.5377498000002561
+linked_list,insert: col at start,5000,50,0.3,0.10522659999969619
+csr,insert: col at start,5000,50,0.3,0.08757520000017394
+array,insert: col at end,5000,50,0.3,0.15096349999976155
+linked_list,insert: col at end,5000,50,0.3,0.22504209999988234
+csr,insert: col at end,5000,50,0.3,0.056713699999818346
+array,insert: col after end,5000,50,0.3,6.300000222836388e-06
+linked_list,insert: col after end,5000,50,0.3,0.06207669999957943
+csr,insert: col after end,5000,50,0.3,9.40000018090359e-06
+array,insert: col into middle,5000,50,0.3,0.4748920000001817
+linked_list,insert: col into middle,5000,50,0.3,0.33494900000005146
+csr,insert: col into middle,5000,50,0.3,0.08342119999997522
+array,insert: col at random pos.,5000,50,0.3,0.4457323000001452
+linked_list,insert: col at random pos.,5000,50,0.3,0.5523799000002327
+csr,insert: col at random pos.,5000,50,0.3,0.09124410000003991
+array,insert: row at start,5000,50,1.0,0.5301215999998021
+linked_list,insert: row at start,5000,50,1.0,0.017059100000096805
+csr,insert: row at start,5000,50,1.0,2.9399999675661093e-05
+array,insert: row at end,5000,50,1.0,0.0011558000001059554
+linked_list,insert: row at end,5000,50,1.0,0.014156700000057754
+csr,insert: row at end,5000,50,1.0,1.3200000012147939e-05
+array,insert: row after end,5000,50,1.0,6.300000222836388e-06
+linked_list,insert: row after end,5000,50,1.0,0.006419100000130129
+csr,insert: row after end,5000,50,1.0,1.5999999959603883e-05
+array,insert: row into middle,5000,50,1.0,0.2835213000003023
+linked_list,insert: row into middle,5000,50,1.0,0.026795100000072125
+csr,insert: row into middle,5000,50,1.0,2.2199999875738285e-05
+array,insert: row at random pos.,5000,50,1.0,0.2957851999999548
+linked_list,insert: row at random pos.,5000,50,1.0,0.016724099999919417
+csr,insert: row at random pos.,5000,50,1.0,3.4500000310799805e-05
+array,insert: col at start,5000,50,1.0,1.121817000000192
+linked_list,insert: col at start,5000,50,1.0,0.1110062999996444
+csr,insert: col at start,5000,50,1.0,0.3007443000001331
+array,insert: col at end,5000,50,1.0,0.2978384999996706
+linked_list,insert: col at end,5000,50,1.0,0.20854370000006384
+csr,insert: col at end,5000,50,1.0,0.1785163000004104
+array,insert: col after end,5000,50,1.0,5.80000005356851e-06
+linked_list,insert: col after end,5000,50,1.0,0.056619899999986956
+csr,insert: col after end,5000,50,1.0,8.50000014906982e-06
+array,insert: col into middle,5000,50,1.0,0.5900575000000572
+linked_list,insert: col into middle,5000,50,1.0,0.378826200000276
+csr,insert: col into middle,5000,50,1.0,0.25668599999971775
+array,insert: col at random pos.,5000,50,1.0,0.5935375999997632
+linked_list,insert: col at random pos.,5000,50,1.0,0.44935639999994237
+csr,insert: col at random pos.,5000,50,1.0,0.28544879999981276
+array,insert: row at start,500,500,0.3,0.26925919999985126
+linked_list,insert: row at start,500,500,0.3,0.0017386999998052488
+csr,insert: row at start,500,500,0.3,1.1699999959091656e-05
+array,insert: row at end,500,500,0.3,0.006413399999928515
+linked_list,insert: row at end,500,500,0.3,0.001325899999756075
+csr,insert: row at end,500,500,0.3,1.4199999895936344e-05
+array,insert: row after end,500,500,0.3,4.999999873689376e-06
+linked_list,insert: row after end,500,500,0.3,0.000985099999979866
+csr,insert: row after end,500,500,0.3,6.9000002440589014e-06
+array,insert: row into middle,500,500,0.3,0.14079910000009477
+linked_list,insert: row into middle,500,500,0.3,0.001872800000001007
+csr,insert: row into middle,500,500,0.3,1.0700000075303251e-05
+array,insert: row at random pos.,500,500,0.3,0.13643769999998767
+linked_list,insert: row at random pos.,500,500,0.3,0.0018801000001076318
+csr,insert: row at random pos.,500,500,0.3,2.1599999854515772e-05
+array,insert: col at start,500,500,0.3,0.3668551999999181
+linked_list,insert: col at start,500,500,0.3,0.011675000000195723
+csr,insert: col at start,500,500,0.3,0.09926480000012816
+array,insert: col at end,500,500,0.3,0.008322700000007899
+linked_list,insert: col at end,500,500,0.3,0.020366499999909138
+csr,insert: col at end,500,500,0.3,0.04648080000015398
+array,insert: col after end,500,500,0.3,5.80000005356851e-06
+linked_list,insert: col after end,500,500,0.3,0.006714900000133639
+csr,insert: col after end,500,500,0.3,7.499999810534064e-06
+array,insert: col into middle,500,500,0.3,0.2035212999999203
+linked_list,insert: col into middle,500,500,0.3,0.03120519999993121
+csr,insert: col into middle,500,500,0.3,0.07627590000038253
+array,insert: col at random pos.,500,500,0.3,0.23257719999992332
+linked_list,insert: col at random pos.,500,500,0.3,0.05454939999981434
+csr,insert: col at random pos.,500,500,0.3,0.07683069999984582
+array,insert: row at start,500,500,1.0,0.4437086000002637
+linked_list,insert: row at start,500,500,1.0,0.0027087999997092993
+csr,insert: row at start,500,500,1.0,1.2099999821657548e-05
+array,insert: row at end,500,500,1.0,0.013818500000070344
+linked_list,insert: row at end,500,500,1.0,0.001514800000222749
+csr,insert: row at end,500,500,1.0,1.9099999917671084e-05
+array,insert: row after end,500,500,1.0,2.3300000066228677e-05
+linked_list,insert: row after end,500,500,1.0,0.0014375000000654836
+csr,insert: row after end,500,500,1.0,7.899999673099956e-06
+array,insert: row into middle,500,500,1.0,0.3056875000002037
+linked_list,insert: row into middle,500,500,1.0,0.0018364000002293324
+csr,insert: row into middle,500,500,1.0,1.1800000265793642e-05
+array,insert: row at random pos.,500,500,1.0,0.2883235999997851
+linked_list,insert: row at random pos.,500,500,1.0,0.0015644999998585263
+csr,insert: row at random pos.,500,500,1.0,1.8000000181928044e-05
+array,insert: col at start,500,500,1.0,0.6515845999997509
+linked_list,insert: col at start,500,500,1.0,0.01288539999995919
+csr,insert: col at start,500,500,1.0,0.32697860000007495
+array,insert: col at end,500,500,1.0,0.024444299999686336
+linked_list,insert: col at end,500,500,1.0,0.02837120000003779
+csr,insert: col at end,500,500,1.0,0.1744064000004073
+array,insert: col after end,500,500,1.0,6.399999620043673e-06
+linked_list,insert: col after end,500,500,1.0,0.0061720999997305626
+csr,insert: col after end,500,500,1.0,6.8999997893115506e-06
+array,insert: col into middle,500,500,1.0,0.3856958000001214
+linked_list,insert: col into middle,500,500,1.0,0.046076300000095216
+csr,insert: col into middle,500,500,1.0,0.24779769999986456
+array,insert: col at random pos.,500,500,1.0,0.34421430000020337
+linked_list,insert: col at random pos.,500,500,1.0,0.03827000000001135
+csr,insert: col at random pos.,500,500,1.0,0.215313199999855
+array,insert: row at start,500,5,0.3,0.006072700000004261
+linked_list,insert: row at start,500,5,0.3,0.0034372000000075786
+csr,insert: row at start,500,5,0.3,1.649999967412441e-05
+array,insert: row at end,500,5,0.3,0.0003546000002643268
+linked_list,insert: row at end,500,5,0.3,0.0032733000002735935
+csr,insert: row at end,500,5,0.3,1.5100000382517464e-05
+array,insert: row after end,500,5,0.3,2.750000021478627e-05
+linked_list,insert: row after end,500,5,0.3,0.000839799999994284
+csr,insert: row after end,500,5,0.3,8.900000011635711e-06
+array,insert: row into middle,500,5,0.3,0.00781860000006418
+linked_list,insert: row into middle,500,5,0.3,0.002314700000169978
+csr,insert: row into middle,500,5,0.3,9.500000032858225e-06
+array,insert: row at random pos.,500,5,0.3,0.00395699999990029
+linked_list,insert: row at random pos.,500,5,0.3,0.002194899999722111
+csr,insert: row at random pos.,500,5,0.3,1.900000006571645e-05
+array,insert: col at start,500,5,0.3,0.004754000000048109
+linked_list,insert: col at start,500,5,0.3,0.01340219999974579
+csr,insert: col at start,500,5,0.3,0.0007416000003104273
+array,insert: col at end,500,5,0.3,0.0065544999997655395
+linked_list,insert: col at end,500,5,0.3,0.0218166999998175
+csr,insert: col at end,500,5,0.3,0.0008063999998739746
+array,insert: col after end,500,5,0.3,5.299999884300632e-06
+linked_list,insert: col after end,500,5,0.3,0.005960399999821675
+csr,insert: col after end,500,5,0.3,7.099999947968172e-06
+array,insert: col into middle,500,5,0.3,0.009521699999822886
+linked_list,insert: col into middle,500,5,0.3,0.022267899999860674
+csr,insert: col into middle,500,5,0.3,0.0007516999999097607
+array,insert: col at random pos.,500,5,0.3,0.012684599999829516
+linked_list,insert: col at random pos.,500,5,0.3,0.0452368999999635
+csr,insert: col at random pos.,500,5,0.3,0.0008769999999458378
+array,insert: row at start,500,5,1.0,0.007252200000039011
+linked_list,insert: row at start,500,5,1.0,0.0019151999999849068
+csr,insert: row at start,500,5,1.0,3.640000022642198e-05
+array,insert: row at end,500,5,1.0,0.00022880000005898182
+linked_list,insert: row at end,500,5,1.0,0.0014812000003985304
+csr,insert: row at end,500,5,1.0,2.4399999801971717e-05
+array,insert: row after end,500,5,1.0,5.099999725644011e-06
+linked_list,insert: row after end,500,5,1.0,0.0007009000000834931
+csr,insert: row after end,500,5,1.0,6.70000008540228e-06
+array,insert: row into middle,500,5,1.0,0.0047233000000233005
+linked_list,insert: row into middle,500,5,1.0,0.001517499999863503
+csr,insert: row into middle,500,5,1.0,1.2100000276404899e-05
+array,insert: row at random pos.,500,5,1.0,0.0043476999999256805
+linked_list,insert: row at random pos.,500,5,1.0,0.0016641999995954393
+csr,insert: row at random pos.,500,5,1.0,1.7500000012660166e-05
+array,insert: col at start,500,5,1.0,0.005495000000337313
+linked_list,insert: col at start,500,5,1.0,0.011044400000173482
+csr,insert: col at start,500,5,1.0,0.002679400000033638
+array,insert: col at end,500,5,1.0,0.008199700000204757
+linked_list,insert: col at end,500,5,1.0,0.0246460999996998
+csr,insert: col at end,500,5,1.0,0.0027804000001196982
+array,insert: col after end,500,5,1.0,5.299999884300632e-06
+linked_list,insert: col after end,500,5,1.0,0.007707200000368175
+csr,insert: col after end,500,5,1.0,7.500000265281415e-06
+array,insert: col into middle,500,5,1.0,0.013502799999969284
+linked_list,insert: col into middle,500,5,1.0,0.026813599999968574
+csr,insert: col into middle,500,5,1.0,0.00262879999991128
+array,insert: col at random pos.,500,5,1.0,0.01426209999999628
+linked_list,insert: col at random pos.,500,5,1.0,0.04445720000012443
+csr,insert: col at random pos.,500,5,1.0,0.0027970999999524793
+array,insert: row at start,50,5000,0.3,0.25279330000012123
+linked_list,insert: row at start,50,5000,0.3,0.0001924000002873072
+csr,insert: row at start,50,5000,0.3,8.200000138458563e-06
+array,insert: row at end,50,5000,0.3,0.0658779999998842
+linked_list,insert: row at end,50,5000,0.3,0.00020849999964411836
+csr,insert: row at end,50,5000,0.3,9.200000022246968e-06
+array,insert: row after end,50,5000,0.3,4.800000169780105e-06
+linked_list,insert: row after end,50,5000,0.3,0.0001291000003220688
+csr,insert: row after end,50,5000,0.3,7.79999982114532e-06
+array,insert: row into middle,50,5000,0.3,0.21042649999981222
+linked_list,insert: row into middle,50,5000,0.3,0.00028449999990698416
+csr,insert: row into middle,50,5000,0.3,8.50000014906982e-06
+array,insert: row at random pos.,50,5000,0.3,0.23313940000025468
+linked_list,insert: row at random pos.,50,5000,0.3,0.00033540000003995374
+csr,insert: row at random pos.,50,5000,0.3,1.8599999748403206e-05
+array,insert: col at start,50,5000,0.3,0.4218946999999389
+linked_list,insert: col at start,50,5000,0.3,0.004562999999961903
+csr,insert: col at start,50,5000,0.3,0.09332300000005489
+array,insert: col at end,50,5000,0.3,0.0011922999997295847
+linked_list,insert: col at end,50,5000,0.3,0.00473199999987628
+csr,insert: col at end,50,5000,0.3,0.042401000000154454
+array,insert: col after end,50,5000,0.3,5.700000201613875e-06
+linked_list,insert: col after end,50,5000,0.3,0.0011851000003844092
+csr,insert: col after end,50,5000,0.3,8.299999990413198e-06
+array,insert: col into middle,50,5000,0.3,0.21599689999993643
+linked_list,insert: col into middle,50,5000,0.3,0.006411400000160938
+csr,insert: col into middle,50,5000,0.3,0.07062820000010106
+array,insert: col at random pos.,50,5000,0.3,0.24188319999984742
+linked_list,insert: col at random pos.,50,5000,0.3,0.008541700000023411
+csr,insert: col at random pos.,50,5000,0.3,0.076039099999889
+array,insert: row at start,50,5000,1.0,0.4361417000000074
+linked_list,insert: row at start,50,5000,1.0,0.00018799999998009298
+csr,insert: row at start,50,5000,1.0,9.100000170292333e-06
+array,insert: row at end,50,5000,1.0,0.10200250000025335
+linked_list,insert: row at end,50,5000,1.0,0.00021130000004632166
+csr,insert: row at end,50,5000,1.0,8.900000011635711e-06
+array,insert: row after end,50,5000,1.0,4.70000031782547e-06
+linked_list,insert: row after end,50,5000,1.0,0.00011140000015075202
+csr,insert: row after end,50,5000,1.0,6.70000008540228e-06
+array,insert: row into middle,50,5000,1.0,0.33112990000017817
+linked_list,insert: row into middle,50,5000,1.0,0.00027119999958813423
+csr,insert: row into middle,50,5000,1.0,8.700000307726441e-06
+array,insert: row at random pos.,50,5000,1.0,0.3597193000000516
+linked_list,insert: row at random pos.,50,5000,1.0,0.0002903999998125073
+csr,insert: row at random pos.,50,5000,1.0,1.5300000086426735e-05
+array,insert: col at start,50,5000,1.0,0.6942902000000686
+linked_list,insert: col at start,50,5000,1.0,0.011036800000056246
+csr,insert: col at start,50,5000,1.0,0.3088035000000673
+array,insert: col at end,50,5000,1.0,0.001607999999578169
+linked_list,insert: col at end,50,5000,1.0,0.00856500000008964
+csr,insert: col at end,50,5000,1.0,0.13457949999974517
+array,insert: col after end,50,5000,1.0,5.100000180391362e-06
+linked_list,insert: col after end,50,5000,1.0,0.0010870999999497144
+csr,insert: col after end,50,5000,1.0,5.599999894911889e-06
+array,insert: col into middle,50,5000,1.0,0.3334808999998131
+linked_list,insert: col into middle,50,5000,1.0,0.010284199999659904
+csr,insert: col into middle,50,5000,1.0,0.21707340000011754
+array,insert: col at random pos.,50,5000,1.0,0.3893426999998155
+linked_list,insert: col at random pos.,50,5000,1.0,0.013478400000167312
+csr,insert: col at random pos.,50,5000,1.0,0.24690899999995963
+array,insert: row at start,50,50,0.3,0.002581199999895034
+linked_list,insert: row at start,50,50,0.3,0.00017289999959757552
+csr,insert: row at start,50,50,0.3,7.999999979801942e-06
+array,insert: row at end,50,50,0.3,0.0007108000004336645
+linked_list,insert: row at end,50,50,0.3,0.00018839999984265887
+csr,insert: row at end,50,50,0.3,7.300000106624793e-06
+array,insert: row after end,50,50,0.3,4.800000169780105e-06
+linked_list,insert: row after end,50,50,0.3,0.00010859999974854873
+csr,insert: row after end,50,50,0.3,6.4000000747910235e-06
+array,insert: row into middle,50,50,0.3,0.0025049000000763044
+linked_list,insert: row into middle,50,50,0.3,0.0003756999999495747
+csr,insert: row into middle,50,50,0.3,3.0899999728717376e-05
+array,insert: row at random pos.,50,50,0.3,0.0025270999999520427
+linked_list,insert: row at random pos.,50,50,0.3,0.00029350000022532186
+csr,insert: row at random pos.,50,50,0.3,1.539999993838137e-05
+array,insert: col at start,50,50,0.3,0.0038118999996186176
+linked_list,insert: col at start,50,50,0.3,0.0019417000003159046
+csr,insert: col at start,50,50,0.3,0.0007114000000001397
+array,insert: col at end,50,50,0.3,0.0010130999999091728
+linked_list,insert: col at end,50,50,0.3,0.003256999999848631
+csr,insert: col at end,50,50,0.3,0.00044370000023263856
+array,insert: col after end,50,50,0.3,4.500000159168849e-06
+linked_list,insert: col after end,50,50,0.3,0.0010647999997672741
+csr,insert: col after end,50,50,0.3,5.9000003602704965e-06
+array,insert: col into middle,50,50,0.3,0.0032080999999379856
+linked_list,insert: col into middle,50,50,0.3,0.003856199999972887
+csr,insert: col into middle,50,50,0.3,0.0006284999999479624
+array,insert: col at random pos.,50,50,0.3,0.003306999999949767
+linked_list,insert: col at random pos.,50,50,0.3,0.006729899999754707
+csr,insert: col at random pos.,50,50,0.3,0.0006994000000304368
+array,insert: row at start,50,50,1.0,0.00386690000004819
+linked_list,insert: row at start,50,50,1.0,0.00017759999991540099
+csr,insert: row at start,50,50,1.0,7.699999969190685e-06
+array,insert: row at end,50,50,1.0,0.0010194000001320092
+linked_list,insert: row at end,50,50,1.0,0.00021169999990888755
+csr,insert: row at end,50,50,1.0,7.999999979801942e-06
+array,insert: row after end,50,50,1.0,3.899999683198985e-06
+linked_list,insert: row after end,50,50,1.0,0.00011169999970661593
+csr,insert: row after end,50,50,1.0,6.70000008540228e-06
+array,insert: row into middle,50,50,1.0,0.0031586000000061176
+linked_list,insert: row into middle,50,50,1.0,0.00026149999985136674
+csr,insert: row into middle,50,50,1.0,7.499999810534064e-06
+array,insert: row at random pos.,50,50,1.0,0.0037564999997812265
+linked_list,insert: row at random pos.,50,50,1.0,0.0002967999998872983
+csr,insert: row at random pos.,50,50,1.0,1.5300000086426735e-05
+array,insert: col at start,50,50,1.0,0.005161200000202371
+linked_list,insert: col at start,50,50,1.0,0.0018798999999489752
+csr,insert: col at start,50,50,1.0,0.002537100000154169
+array,insert: col at end,50,50,1.0,0.0019046000002163055
+linked_list,insert: col at end,50,50,1.0,0.0036368000000948086
+csr,insert: col at end,50,50,1.0,0.0015228999995997583
+array,insert: col after end,50,50,1.0,4.600000011123484e-06
+linked_list,insert: col after end,50,50,1.0,0.00108639999962179
+csr,insert: col after end,50,50,1.0,6.199999916134402e-06
+array,insert: col into middle,50,50,1.0,0.004572899999857327
+linked_list,insert: col into middle,50,50,1.0,0.0037153999996917264
+csr,insert: col into middle,50,50,1.0,0.0036172000000078697
+array,insert: col at random pos.,50,50,1.0,0.005963700000393146
+linked_list,insert: col at random pos.,50,50,1.0,0.008870099999967351
+csr,insert: col at random pos.,50,50,1.0,0.002259599999888451
+array,insert: row at start,5,500,0.3,0.0035115000000587315
+linked_list,insert: row at start,5,500,0.3,5.1900000016757986e-05
+csr,insert: row at start,5,500,0.3,7.499999810534064e-06
+array,insert: row at end,5,500,0.3,0.0054127000003063586
+linked_list,insert: row at end,5,500,0.3,8.429999979853164e-05
+csr,insert: row at end,5,500,0.3,7.800000275892671e-06
+array,insert: row after end,5,500,0.3,8.400000297115184e-06
+linked_list,insert: row after end,5,500,0.3,9.469999986322364e-05
+csr,insert: row after end,5,500,0.3,1.1900000117748277e-05
+array,insert: row into middle,5,500,0.3,0.008190600000034465
+linked_list,insert: row into middle,5,500,0.3,0.0001449999999749707
+csr,insert: row into middle,5,500,0.3,8.50000014906982e-06
+array,insert: row at random pos.,5,500,0.3,0.010790599999836559
+linked_list,insert: row at random pos.,5,500,0.3,0.00018369999997958075
+csr,insert: row at random pos.,5,500,0.3,1.52000002344721e-05
+array,insert: col at start,5,500,0.3,0.015566600000056496
+linked_list,insert: col at start,5,500,0.3,0.0014381000000867061
+csr,insert: col at start,5,500,0.3,0.0008654999996906554
+array,insert: col at end,5,500,0.3,0.0005607999996755098
+linked_list,insert: col at end,5,500,0.3,0.0022462000001723936
+csr,insert: col at end,5,500,0.3,0.0003961000002163928
+array,insert: col after end,5,500,0.3,5.099999725644011e-06
+linked_list,insert: col after end,5,500,0.3,0.0006469999998444109
+csr,insert: col after end,5,500,0.3,5.8999999055231456e-06
+array,insert: col into middle,5,500,0.3,0.008216799999900104
+linked_list,insert: col into middle,5,500,0.3,0.0022993000002315966
+csr,insert: col into middle,5,500,0.3,0.0005968999998913205
+array,insert: col at random pos.,5,500,0.3,0.00964170000042941
+linked_list,insert: col at random pos.,5,500,0.3,0.0039010999998936313
+csr,insert: col at random pos.,5,500,0.3,0.0006430999997064646
+array,insert: row at start,5,500,1.0,0.004923200000121142
+linked_list,insert: row at start,5,500,1.0,5.239999973127851e-05
+csr,insert: row at start,5,500,1.0,8.000000434549293e-06
+array,insert: row at end,5,500,1.0,0.006720900000345864
+linked_list,insert: row at end,5,500,1.0,9.629999976823456e-05
+csr,insert: row at end,5,500,1.0,9.500000032858225e-06
+array,insert: row after end,5,500,1.0,5.100000180391362e-06
+linked_list,insert: row after end,5,500,1.0,6.690000009257346e-05
+csr,insert: row after end,5,500,1.0,7.000000096013537e-06
+array,insert: row into middle,5,500,1.0,0.009910799999943265
+linked_list,insert: row into middle,5,500,1.0,0.00013860000035492703
+csr,insert: row into middle,5,500,1.0,8.200000138458563e-06
+array,insert: row at random pos.,5,500,1.0,0.013596499999948719
+linked_list,insert: row at random pos.,5,500,1.0,0.00018690000024434994
+csr,insert: row at random pos.,5,500,1.0,1.5499999790336005e-05
+array,insert: col at start,5,500,1.0,0.01735770000004777
+linked_list,insert: col at start,5,500,1.0,0.001969800000097166
+csr,insert: col at start,5,500,1.0,0.0029005000001234293
+array,insert: col at end,5,500,1.0,0.0006091999998716346
+linked_list,insert: col at end,5,500,1.0,0.00248600000031729
+csr,insert: col at end,5,500,1.0,0.0012656000003516965
+array,insert: col after end,5,500,1.0,4.499999704421498e-06
+linked_list,insert: col after end,5,500,1.0,0.0006076999998185784
+csr,insert: col after end,5,500,1.0,5.399999736255268e-06
+array,insert: col into middle,5,500,1.0,0.008670899999742687
+linked_list,insert: col into middle,5,500,1.0,0.0029921999998805404
+csr,insert: col into middle,5,500,1.0,0.002048299999842129
+array,insert: col at random pos.,5,500,1.0,0.009730100000069797
+linked_list,insert: col at random pos.,5,500,1.0,0.00446029999966413
+csr,insert: col at random pos.,5,500,1.0,0.0021433999995679187
+array,"update: random row, random column",10000,100,0.3,3.949999972974183e-05
+linked_list,"update: random row, random column",10000,100,0.3,0.010539200000039273
+csr,"update: random row, random column",10000,100,0.3,0.004351899999619491
+array,"update: first row, first column",10000,100,0.3,1.919999976962572e-05
+linked_list,"update: first row, first column",10000,100,0.3,1.2900000001536682e-05
+csr,"update: first row, first column",10000,100,0.3,0.001205100000333914
+array,"update: last row, last column",10000,100,0.3,1.5999999959603883e-05
+linked_list,"update: last row, last column",10000,100,0.3,0.02401640000016414
+csr,"update: last row, last column",10000,100,0.3,5.229999987932388e-05
+array,"update: random row, random column",10000,100,1.0,5.600000031336094e-05
+linked_list,"update: random row, random column",10000,100,1.0,0.011232800000016141
+csr,"update: random row, random column",10000,100,1.0,0.005608200000096986
+array,"update: first row, first column",10000,100,1.0,4.350000017439015e-05
+linked_list,"update: first row, first column",10000,100,1.0,8.50000014906982e-06
+csr,"update: first row, first column",10000,100,1.0,0.003303699999833043
+array,"update: last row, last column",10000,100,1.0,1.9499999780236976e-05
+linked_list,"update: last row, last column",10000,100,1.0,0.025385999999798514
+csr,"update: last row, last column",10000,100,1.0,0.00018530000033933902
+array,"update: random row, random column",1000,1000,0.3,4.540000009001233e-05
+linked_list,"update: random row, random column",1000,1000,0.3,0.0015189999999165593
+csr,"update: random row, random column",1000,1000,0.3,0.0023545999997622857
+array,"update: first row, first column",1000,1000,0.3,2.7499999760038918e-05
+linked_list,"update: first row, first column",1000,1000,0.3,1.8199999885837315e-05
+csr,"update: first row, first column",1000,1000,0.3,0.0006527999998979794
+array,"update: last row, last column",1000,1000,0.3,1.6199999663513154e-05
+linked_list,"update: last row, last column",1000,1000,0.3,0.002582799999800045
+csr,"update: last row, last column",1000,1000,0.3,0.0006382999999914318
+array,"update: random row, random column",1000,1000,1.0,4.4999999772699084e-05
+linked_list,"update: random row, random column",1000,1000,1.0,0.0012383000002955669
+csr,"update: random row, random column",1000,1000,1.0,0.0033075000001190347
+array,"update: first row, first column",1000,1000,1.0,3.080000033151009e-05
+linked_list,"update: first row, first column",1000,1000,1.0,8.200000138458563e-06
+csr,"update: first row, first column",1000,1000,1.0,0.0022450000001299486
+array,"update: last row, last column",1000,1000,1.0,3.409999999348656e-05
+linked_list,"update: last row, last column",1000,1000,1.0,0.0063602000000173575
+csr,"update: last row, last column",1000,1000,1.0,0.005363799999940966
+array,"update: random row, random column",100,10000,0.3,4.739999985758914e-05
+linked_list,"update: random row, random column",100,10000,0.3,0.00018619999991642544
+csr,"update: random row, random column",100,10000,0.3,0.005238000000190368
+array,"update: first row, first column",100,10000,0.3,3.310000010969816e-05
+linked_list,"update: first row, first column",100,10000,0.3,1.249999968422344e-05
+csr,"update: first row, first column",100,10000,0.3,0.0006941000001461362
+array,"update: last row, last column",100,10000,0.3,2.5800000003073364e-05
+linked_list,"update: last row, last column",100,10000,0.3,0.00031360000002678134
+csr,"update: last row, last column",100,10000,0.3,0.0064145000001190056
+array,"update: random row, random column",100,10000,1.0,8.709999974598759e-05
+linked_list,"update: random row, random column",100,10000,1.0,0.00031129999979384593
+csr,"update: random row, random column",100,10000,1.0,0.014375899999777175
+array,"update: first row, first column",100,10000,1.0,2.099999983329326e-05
+linked_list,"update: first row, first column",100,10000,1.0,1.160000010713702e-05
+csr,"update: first row, first column",100,10000,1.0,0.0022120000003269524
+array,"update: last row, last column",100,10000,1.0,2.210000002378365e-05
+linked_list,"update: last row, last column",100,10000,1.0,0.00028199999997013947
+csr,"update: last row, last column",100,10000,1.0,0.022430699999858916
+array,"update: random row, random column",2500,25,0.3,4.910000006930204e-05
+linked_list,"update: random row, random column",2500,25,0.3,0.0032516000001123757
+csr,"update: random row, random column",2500,25,0.3,0.0015572000002066488
+array,"update: first row, first column",2500,25,0.3,2.1100000139995245e-05
+linked_list,"update: first row, first column",2500,25,0.3,1.4700000065204222e-05
+csr,"update: first row, first column",2500,25,0.3,0.0002672000000529806
+array,"update: last row, last column",2500,25,0.3,1.7099999695346924e-05
+linked_list,"update: last row, last column",2500,25,0.3,0.006483099999968545
+csr,"update: last row, last column",2500,25,0.3,2.97000001410197e-05
+array,"update: random row, random column",2500,25,1.0,4.440000020622392e-05
+linked_list,"update: random row, random column",2500,25,1.0,0.0029638999999406224
+csr,"update: random row, random column",2500,25,1.0,0.001287999999931344
+array,"update: first row, first column",2500,25,1.0,1.8700000055105193e-05
+linked_list,"update: first row, first column",2500,25,1.0,1.0400000064691994e-05
+csr,"update: first row, first column",2500,25,1.0,0.0002681000000848144
+array,"update: last row, last column",2500,25,1.0,1.539999993838137e-05
+linked_list,"update: last row, last column",2500,25,1.0,0.005815099999836093
+csr,"update: last row, last column",2500,25,1.0,3.549999973984086e-05
+array,"update: random row, random column",250,250,0.3,3.990000004705507e-05
+linked_list,"update: random row, random column",250,250,0.3,0.00046149999980116263
+csr,"update: random row, random column",250,250,0.3,0.00029230000018287683
+array,"update: first row, first column",250,250,0.3,1.4899999769113492e-05
+linked_list,"update: first row, first column",250,250,0.3,8.200000138458563e-06
+csr,"update: first row, first column",250,250,0.3,5.069999997431296e-05
+array,"update: last row, last column",250,250,0.3,1.539999993838137e-05
+linked_list,"update: last row, last column",250,250,0.3,0.0006693000000268512
+csr,"update: last row, last column",250,250,0.3,0.0001299000000472006
+array,"update: random row, random column",250,250,1.0,3.990000004705507e-05
+linked_list,"update: random row, random column",250,250,1.0,0.0002951999999822874
+csr,"update: random row, random column",250,250,1.0,0.0003050000000257569
+array,"update: first row, first column",250,250,1.0,1.5300000086426735e-05
+linked_list,"update: first row, first column",250,250,1.0,9.200000022246968e-06
+csr,"update: first row, first column",250,250,1.0,0.00012939999987793271
+array,"update: last row, last column",250,250,1.0,1.829999973779195e-05
+linked_list,"update: last row, last column",250,250,1.0,0.0006782000000384869
+csr,"update: last row, last column",250,250,1.0,0.00046610000026703347
+array,"update: random row, random column",25,2500,0.3,3.779999997277628e-05
+linked_list,"update: random row, random column",25,2500,0.3,7.730000015726546e-05
+csr,"update: random row, random column",25,2500,0.3,0.00027809999983219313
+array,"update: first row, first column",25,2500,0.3,1.609999981155852e-05
+linked_list,"update: first row, first column",25,2500,0.3,1.1699999959091656e-05
+csr,"update: first row, first column",25,2500,0.3,4.3599999571597436e-05
+array,"update: last row, last column",25,2500,0.3,4.6799999836366624e-05
+linked_list,"update: last row, last column",25,2500,0.3,7.489999961762805e-05
+csr,"update: last row, last column",25,2500,0.3,7.770000001983135e-05
+array,"update: random row, random column",25,2500,1.0,4.399999988891068e-05
+linked_list,"update: random row, random column",25,2500,1.0,8.699999989403295e-05
+csr,"update: random row, random column",25,2500,1.0,0.0008146000000124332
+array,"update: first row, first column",25,2500,1.0,1.970000039364095e-05
+linked_list,"update: first row, first column",25,2500,1.0,1.049999991664663e-05
+csr,"update: first row, first column",25,2500,1.0,0.00012999999989915523
+array,"update: last row, last column",25,2500,1.0,1.629999997021514e-05
+linked_list,"update: last row, last column",25,2500,1.0,8.150000030582305e-05
+csr,"update: last row, last column",25,2500,1.0,9.959999988495838e-05
+array,"update: random row, random column",5000,50,0.3,3.8300000142044155e-05
+linked_list,"update: random row, random column",5000,50,0.3,0.005891500000416272
+csr,"update: random row, random column",5000,50,0.3,0.002429499999834661
+array,"update: first row, first column",5000,50,0.3,1.5999999959603883e-05
+linked_list,"update: first row, first column",5000,50,0.3,1.1000000085914508e-05
+csr,"update: first row, first column",5000,50,0.3,0.00046650000012959936
+array,"update: last row, last column",5000,50,0.3,1.52000002344721e-05
+linked_list,"update: last row, last column",5000,50,0.3,0.013136900000063179
+csr,"update: last row, last column",5000,50,0.3,3.7400000110210385e-05
+array,"update: random row, random column",5000,50,1.0,7.679999998799758e-05
+linked_list,"update: random row, random column",5000,50,1.0,0.005651599999964674
+csr,"update: random row, random column",5000,50,1.0,0.002514199999950506
+array,"update: first row, first column",5000,50,1.0,2.029999996011611e-05
+linked_list,"update: first row, first column",5000,50,1.0,1.0000000202126103e-05
+csr,"update: first row, first column",5000,50,1.0,0.0008089999996627739
+array,"update: last row, last column",5000,50,1.0,1.5900000107649248e-05
+linked_list,"update: last row, last column",5000,50,1.0,0.011214900000140915
+csr,"update: last row, last column",5000,50,1.0,5.599999985861359e-05
+array,"update: random row, random column",500,500,0.3,5.4800000270915916e-05
+linked_list,"update: random row, random column",500,500,0.3,0.0009091000001717475
+csr,"update: random row, random column",500,500,0.3,0.0006108000002313929
+array,"update: first row, first column",500,500,0.3,1.6599999980826396e-05
+linked_list,"update: first row, first column",500,500,0.3,1.1199999789823778e-05
+csr,"update: first row, first column",500,500,0.3,0.0001415000001543376
+array,"update: last row, last column",500,500,0.3,1.699999984339229e-05
+linked_list,"update: last row, last column",500,500,0.3,0.0014172000001053675
+csr,"update: last row, last column",500,500,0.3,0.00032909999981711735
+array,"update: random row, random column",500,500,1.0,4.3399999867688166e-05
+linked_list,"update: random row, random column",500,500,1.0,0.0006837999999333988
+csr,"update: random row, random column",500,500,1.0,0.0008571000003030349
+array,"update: first row, first column",500,500,1.0,1.5999999959603883e-05
+linked_list,"update: first row, first column",500,500,1.0,1.880000036180718e-05
+csr,"update: first row, first column",500,500,1.0,0.0003839999999399879
+array,"update: last row, last column",500,500,1.0,1.650000012887176e-05
+linked_list,"update: last row, last column",500,500,1.0,0.0013217000000622647
+csr,"update: last row, last column",500,500,1.0,0.001022700000248733
+array,"update: random row, random column",500,5,0.3,4.530000023805769e-05
+linked_list,"update: random row, random column",500,5,0.3,0.000759499999730906
+csr,"update: random row, random column",500,5,0.3,0.0002658000003066263
+array,"update: first row, first column",500,5,0.3,2.590000030977535e-05
+linked_list,"update: first row, first column",500,5,0.3,9.60000033956021e-06
+csr,"update: first row, first column",500,5,0.3,5.580000015470432e-05
+array,"update: last row, last column",500,5,0.3,1.5799999800947262e-05
+linked_list,"update: last row, last column",500,5,0.3,0.0012096000000383356
+csr,"update: last row, last column",500,5,0.3,2.0899999981338624e-05
+array,"update: random row, random column",500,5,1.0,4.099999978279811e-05
+linked_list,"update: random row, random column",500,5,1.0,0.0008403000001635519
+csr,"update: random row, random column",500,5,1.0,0.00027709999994840473
+array,"update: first row, first column",500,5,1.0,1.9600000086938962e-05
+linked_list,"update: first row, first column",500,5,1.0,1.0099999599333387e-05
+csr,"update: first row, first column",500,5,1.0,6.180000036692945e-05
+array,"update: last row, last column",500,5,1.0,1.920000022437307e-05
+linked_list,"update: last row, last column",500,5,1.0,0.0013059999996585248
+csr,"update: last row, last column",500,5,1.0,2.2599999738304177e-05
+array,"update: random row, random column",50,5000,0.3,4.149999995206599e-05
+linked_list,"update: random row, random column",50,5000,0.3,0.00011469999981272849
+csr,"update: random row, random column",50,5000,0.3,0.0016237999998338637
+array,"update: first row, first column",50,5000,0.3,1.5100000382517464e-05
+linked_list,"update: first row, first column",50,5000,0.3,1.0899999779212521e-05
+csr,"update: first row, first column",50,5000,0.3,8.74000002113462e-05
+array,"update: last row, last column",50,5000,0.3,1.4100000043981709e-05
+linked_list,"update: last row, last column",50,5000,0.3,0.00014029999965714524
+csr,"update: last row, last column",50,5000,0.3,0.0036352000001897977
+array,"update: random row, random column",50,5000,1.0,3.72999998035084e-05
+linked_list,"update: random row, random column",50,5000,1.0,0.00011929999982385198
+csr,"update: random row, random column",50,5000,1.0,0.0029508000002351764
+array,"update: first row, first column",50,5000,1.0,1.609999981155852e-05
+linked_list,"update: first row, first column",50,5000,1.0,9.700000191514846e-06
+csr,"update: first row, first column",50,5000,1.0,0.00032809999993332895
+array,"update: last row, last column",50,5000,1.0,1.6599999980826396e-05
+linked_list,"update: last row, last column",50,5000,1.0,0.00015510000002905144
+csr,"update: last row, last column",50,5000,1.0,0.01119269999981043
+array,"update: random row, random column",50,50,0.3,4.260000014255638e-05
+linked_list,"update: random row, random column",50,50,0.3,0.0001283999999941443
+csr,"update: random row, random column",50,50,0.3,9.580000005371403e-05
+array,"update: first row, first column",50,50,0.3,1.5900000107649248e-05
+linked_list,"update: first row, first column",50,50,0.3,1.340000017080456e-05
+csr,"update: first row, first column",50,50,0.3,4.1400000100111356e-05
+array,"update: last row, last column",50,50,0.3,1.609999981155852e-05
+linked_list,"update: last row, last column",50,50,0.3,0.00020010000025649788
+csr,"update: last row, last column",50,50,0.3,2.229999972769292e-05
+array,"update: random row, random column",50,50,1.0,3.0900000183464726e-05
+linked_list,"update: random row, random column",50,50,1.0,9.259999978894484e-05
+csr,"update: random row, random column",50,50,1.0,8.969999998953426e-05
+array,"update: first row, first column",50,50,1.0,1.7100000150094274e-05
+linked_list,"update: first row, first column",50,50,1.0,9.500000032858225e-06
+csr,"update: first row, first column",50,50,1.0,2.859999995052931e-05
+array,"update: last row, last column",50,50,1.0,2.7600000066740904e-05
+linked_list,"update: last row, last column",50,50,1.0,0.00023399999963658047
+csr,"update: last row, last column",50,50,1.0,4.199999966658652e-05
+array,"update: random row, random column",5,500,0.3,3.9600000036443816e-05
+linked_list,"update: random row, random column",5,500,0.3,0.00023779999992257217
+csr,"update: random row, random column",5,500,0.3,7.039999991320656e-05
+array,"update: first row, first column",5,500,0.3,1.560000009703799e-05
+linked_list,"update: first row, first column",5,500,0.3,1.1699999959091656e-05
+csr,"update: first row, first column",5,500,0.3,2.119999999194988e-05
+array,"update: last row, last column",5,500,0.3,1.560000009703799e-05
+linked_list,"update: last row, last column",5,500,0.3,2.7100000352220377e-05
+csr,"update: last row, last column",5,500,0.3,3.0199999855540227e-05
+array,"update: random row, random column",5,500,1.0,4.269999999451102e-05
+linked_list,"update: random row, random column",5,500,1.0,0.000189200000022538
+csr,"update: random row, random column",5,500,1.0,0.00010149999980058055
+array,"update: first row, first column",5,500,1.0,1.810000003388268e-05
+linked_list,"update: first row, first column",5,500,1.0,1.0000000202126103e-05
+csr,"update: first row, first column",5,500,1.0,2.4500000108673703e-05
+array,"update: last row, last column",5,500,1.0,1.559999964229064e-05
+linked_list,"update: last row, last column",5,500,1.0,3.779999997277628e-05
+csr,"update: last row, last column",5,500,1.0,2.7200000204175012e-05

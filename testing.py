@@ -1,6 +1,7 @@
 import os
 import random
 import timeit
+import csv
 from spreadsheet.cell import Cell
 from spreadsheet.arraySpreadsheet import ArraySpreadsheet
 from spreadsheet.linkedlistSpreadsheet import LinkedListSpreadsheet
@@ -231,25 +232,47 @@ if __name__ == '__main__':
         # dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  1.0, -100000, 100000)
 
         # large spreadsheets
-        # large = 500
-        # dataGenerator.dataGen(data_dir, large, large,               0.3, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, large // 10, large * 10,    0.3, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, large * 10, large // 10,    0.3, -100000, 100000)
+        large = 500
+        dataGenerator.dataGen(data_dir, large, large,               0.3, -100000, 100000)
+        dataGenerator.dataGen(data_dir, large // 10, large * 10,    0.3, -100000, 100000)
+        dataGenerator.dataGen(data_dir, large * 10, large // 10,    0.3, -100000, 100000)
         
-        # dataGenerator.dataGen(data_dir, large, large,               1.0, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, large // 10, large * 10,    1.0, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, large * 10, large // 10,    1.0, -100000, 100000)
+        dataGenerator.dataGen(data_dir, large, large,               1.0, -100000, 100000)
+        dataGenerator.dataGen(data_dir, large // 10, large * 10,    1.0, -100000, 100000)
+        dataGenerator.dataGen(data_dir, large * 10, large // 10,    1.0, -100000, 100000)
+        
+        # extra large spreadsheets
+        x_large = 1000
+        dataGenerator.dataGen(data_dir, x_large, x_large,               0.3, -100000, 100000)
+        dataGenerator.dataGen(data_dir, x_large // 10, x_large * 10,    0.3, -100000, 100000)
+        dataGenerator.dataGen(data_dir, x_large * 10, x_large // 10,    0.3, -100000, 100000)
+        
+        dataGenerator.dataGen(data_dir, x_large, x_large,               1.0, -100000, 100000)
+        dataGenerator.dataGen(data_dir, x_large // 10, x_large * 10,    1.0, -100000, 100000)
+        dataGenerator.dataGen(data_dir, x_large * 10, x_large // 10,    1.0, -100000, 100000)
 
         if (get_data_files()):
             create_spreadsheets()
             test_find(10)
             test_insert(10)
             test_update(10)
+            
+        # create a new file for writing
+        with open('testresults.csv', mode='w', newline='') as results_file:
+            results_writer = csv.writer(results_file, delimiter=',')
 
-        print(f'{len(results)} tests completed.')
-        print('---------------------------------------------------------------------------------------------------------------------------------')
-        for result in results:
-            print(f'{result[0]:35}\t{result[1]:37}\t{result[2]:>10}\t{result[3]}')
+            # write the header row
+            results_writer.writerow(['implementation', 'action', 'num_rows', 'num_cols', 'filled', 'time'])
+
+            print(f'{len(results)} tests completed.')
+            print('---------------------------------------------------------------------------------------------------------------------------------')
+            for result in results:
+                print(f'{result[0]:35}\t{result[1]:35}\t{result[2]:>10}\t{result[3]}') 
+            
+                # write results to csv file
+                # split result[1] (data description) into num_rows, num_cols, percentage filled
+                data_details = result[1].split()
+                results_writer.writerow([result[2], result[0], int(data_details[1][:-1]), int(data_details[3][:-1]), float(data_details[4][1:]), float(result[3])])
 
         # compare_entries()
         # for entry in entries_out:
