@@ -219,19 +219,20 @@ if __name__ == '__main__':
                 dataGenerator.dataGen(data_dir, sz  * 10, sz // 10, density, min_val, max_val)       
 
     def run():
-        # remove_data_files()
-        # generate_data_files()
+        remove_data_files()
+        generate_data_files()
     
         print('Starting tests...')
 
         if (get_data_files()):
             create_spreadsheets()
-            test_find(1000)
-            test_insert(1000)
-            test_update(1000)
+            test_find(100)
+            test_insert(100)
+            test_update(100)
             
         # create a new file for writing
-        with open('testresults_raw.csv', mode='w', newline='') as results_file:
+        t = str(time.time())
+        with open(f'results_{t}.csv', mode='w', newline='') as results_file:
             results_writer = csv.writer(results_file, delimiter=',')
 
             # write the header row
