@@ -64,13 +64,13 @@ if __name__ == '__main__':
         for filename in data_files:
             print(f'\t- {filename}')
             (cells, values) = create_cells_from_file(data_dir + '/' + filename)
-
+            print('\t\tarray...')
             array = ArraySpreadsheet()
             array.buildSpreadsheet(cells)
-
+            print('\t\tcsr...')
             csr = CSRSpreadsheet()
             csr.buildSpreadsheet(cells)
-
+            print('\t\tlinked list...')
             # building linked list last, because it pops first item from cells!
             linked_list = LinkedListSpreadsheet()
             linked_list.buildSpreadsheet(cells)
@@ -207,49 +207,22 @@ if __name__ == '__main__':
 
     def run():
         # delete existing files in data directory
-        remove_data_files()
+        # remove_data_files()
         
         print('Generating new data files...')
         # create source data
-        # small spreadsheets
-        small = 50
-        dataGenerator.dataGen(data_dir, small, small,               0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, small // 10, small * 10,    0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, small * 10, small // 10,      0.3, -100000, 100000)
         
-        dataGenerator.dataGen(data_dir, small, small,               1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, small // 10, small * 10,    1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, small * 10, small // 10,    1.0, -100000, 100000)
+        sizes = [10, 32, 100, 316, 1000]
+        densities = [0.33, 0.66, 1.0]
+        (min_val, max_val) = [-100000, 1000000]
 
-        # medium spreadsheets
-        # medium = 250
-        # dataGenerator.dataGen(data_dir, medium, medium,             0.3, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, medium // 10, medium * 10,  0.3, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  0.3, -100000, 100000)
-        
-        # dataGenerator.dataGen(data_dir, medium, medium,             1.0, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, medium // 10, medium * 10,  1.0, -100000, 100000)
-        # dataGenerator.dataGen(data_dir, medium * 10, medium // 10,  1.0, -100000, 100000)
+        for sz in sizes:
+            for density in densities:
+                dataGenerator.dataGen(data_dir, sz, sz,             density, min_val, max_val)
+                dataGenerator.dataGen(data_dir, sz // 10, sz  * 10, density, min_val, max_val)
+                dataGenerator.dataGen(data_dir, sz  * 10, sz // 10, density, min_val, max_val)
 
-        # large spreadsheets
-        large = 500
-        dataGenerator.dataGen(data_dir, large, large,               0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large // 10, large * 10,    0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large * 10, large // 10,    0.3, -100000, 100000)
-        
-        dataGenerator.dataGen(data_dir, large, large,               1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large // 10, large * 10,    1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, large * 10, large // 10,    1.0, -100000, 100000)
-        
-        # extra large spreadsheets
-        x_large = 1000
-        dataGenerator.dataGen(data_dir, x_large, x_large,               0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, x_large // 10, x_large * 10,    0.3, -100000, 100000)
-        dataGenerator.dataGen(data_dir, x_large * 10, x_large // 10,    0.3, -100000, 100000)
-        
-        dataGenerator.dataGen(data_dir, x_large, x_large,               1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, x_large // 10, x_large * 10,    1.0, -100000, 100000)
-        dataGenerator.dataGen(data_dir, x_large * 10, x_large // 10,    1.0, -100000, 100000)
+        print('Starting tests...')
 
         if (get_data_files()):
             create_spreadsheets()
